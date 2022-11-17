@@ -308,20 +308,20 @@ function SheetGroupRowsDemo(){
             group={{
               "name":"STATS",
               "entries":[
-                {
-                "currency_id":"STATS",
-                "name":"HIJ",
-                "balance":130400,
-                "escrow":1250.5
-              },
-                {"currency_id":"STATS","name":"TUV","balance":79,"escrow":37},
                 {"currency_id":"STATS","name":"ABC","balance":506,"escrow":50.5},
                 {
                 "currency_id":"STATS",
                 "name":"NOP",
                 "balance":1000,
                 "escrow":50.5
-              }
+              },
+                {
+                "currency_id":"STATS",
+                "name":"HIJ",
+                "balance":130400,
+                "escrow":1250.5
+              },
+                {"currency_id":"STATS","name":"TUV","balance":79,"escrow":37}
               ]
             }}
             impl={{
@@ -348,20 +348,20 @@ function SheetGroupRowsDemo(){
             group={{
               "name":"STATS",
               "entries":[
-                {
-                "currency_id":"STATS",
-                "name":"HIJ",
-                "balance":130400,
-                "escrow":1250.5
-              },
-                {"currency_id":"STATS","name":"TUV","balance":79,"escrow":37},
                 {"currency_id":"STATS","name":"ABC","balance":506,"escrow":50.5},
                 {
                 "currency_id":"STATS",
                 "name":"NOP",
                 "balance":1000,
                 "escrow":50.5
-              }
+              },
+                {
+                "currency_id":"STATS",
+                "name":"HIJ",
+                "balance":130400,
+                "escrow":1250.5
+              },
+                {"currency_id":"STATS","name":"TUV","balance":79,"escrow":37}
               ]
             }}
             impl={{
@@ -425,7 +425,8 @@ function SheetDemo(){
               "escrow":50.5
             },
               {"currency_id":"DOGE","name":"WXY","balance":456,"escrow":63},
-              {"currency_id":"DOGE","name":"KLM","balance":100,"escrow":0.5},
+              {"currency_id":"DOGE","name":"QRS","balance":490,"escrow":34.0},
+              {"currency_id":"STATS","name":"ABC","balance":506,"escrow":50.5},
               {
               "currency_id":"STATS",
               "name":"HIJ",
@@ -438,8 +439,7 @@ function SheetDemo(){
               "balance":1000,
               "escrow":50.5
             },
-              {"currency_id":"DOGE","name":"QRS","balance":490,"escrow":34.0},
-              {"currency_id":"STATS","name":"ABC","balance":506,"escrow":50.5}
+              {"currency_id":"DOGE","name":"KLM","balance":100,"escrow":0.5}
             ]}>
           </slim_sheet.Sheet>
         </ui_static.Div>
