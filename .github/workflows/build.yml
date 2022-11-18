@@ -11,7 +11,7 @@ jobs:
     - name: Deploy gh-pages
       run: |-
         npm install
-        npm expo build:web
+        npx expo build:web
         git config user.name github-actions
         git config user.email github-actions@github.com
         git --work-tree dist add --all
