@@ -359,6 +359,12 @@ function TableListViewEntriesDemo(){
           <slim_table_list.TableListViewEntries
             design={{"type":"light"}}
             entries={[
+              {
+              "currency_id":"STATS",
+              "name":"HIJ",
+              "balance":130400,
+              "escrow":1250.5
+            },
               {"currency_id":"STATS","name":"ABC","balance":506,"escrow":50.5},
               {
               "currency_id":"STATS",
@@ -366,13 +372,7 @@ function TableListViewEntriesDemo(){
               "balance":1000,
               "escrow":50.5
             },
-              {"currency_id":"STATS","name":"TUV","balance":79,"escrow":37},
-              {
-              "currency_id":"STATS",
-              "name":"HIJ",
-              "balance":130400,
-              "escrow":1250.5
-            }
+              {"currency_id":"STATS","name":"TUV","balance":79,"escrow":37}
             ]}
             display={{
               "brief":{
@@ -391,6 +391,12 @@ function TableListViewEntriesDemo(){
           <slim_table_list.TableListViewEntries
             design={{"type":"dark"}}
             entries={[
+              {
+              "currency_id":"STATS",
+              "name":"HIJ",
+              "balance":130400,
+              "escrow":1250.5
+            },
               {"currency_id":"STATS","name":"ABC","balance":506,"escrow":50.5},
               {
               "currency_id":"STATS",
@@ -398,13 +404,7 @@ function TableListViewEntriesDemo(){
               "balance":1000,
               "escrow":50.5
             },
-              {"currency_id":"STATS","name":"TUV","balance":79,"escrow":37},
-              {
-              "currency_id":"STATS",
-              "name":"HIJ",
-              "balance":130400,
-              "escrow":1250.5
-            }
+              {"currency_id":"STATS","name":"TUV","balance":79,"escrow":37}
             ]}
             display={{
               "brief":{
@@ -435,14 +435,14 @@ function TableListViewGroupDemo(){
             group={{
               "name":"STATS",
               "entries":[
+                {"currency_id":"STATS","name":"ABC","balance":506,"escrow":50.5},
+                {"currency_id":"STATS","name":"TUV","balance":79,"escrow":37},
                 {
                 "currency_id":"STATS",
                 "name":"HIJ",
                 "balance":130400,
                 "escrow":1250.5
               },
-                {"currency_id":"STATS","name":"ABC","balance":506,"escrow":50.5},
-                {"currency_id":"STATS","name":"TUV","balance":79,"escrow":37},
                 {
                 "currency_id":"STATS",
                 "name":"NOP",
@@ -470,14 +470,14 @@ function TableListViewGroupDemo(){
             group={{
               "name":"STATS",
               "entries":[
+                {"currency_id":"STATS","name":"ABC","balance":506,"escrow":50.5},
+                {"currency_id":"STATS","name":"TUV","balance":79,"escrow":37},
                 {
                 "currency_id":"STATS",
                 "name":"HIJ",
                 "balance":130400,
                 "escrow":1250.5
               },
-                {"currency_id":"STATS","name":"ABC","balance":506,"escrow":50.5},
-                {"currency_id":"STATS","name":"TUV","balance":79,"escrow":37},
                 {
                 "currency_id":"STATS",
                 "name":"NOP",
@@ -527,106 +527,106 @@ function TableListViewPagedDemo(){
               }
             }}
             entries={[
-              {"id":"id-0","name":"name-0","amount":0.36292957580240526},
-              {"id":"id-1","name":"name-1","amount":0.9220545087373725},
-              {"id":"id-2","name":"name-2","amount":0.7923617288558686},
-              {"id":"id-3","name":"name-3","amount":0.05543343415839341},
-              {"id":"id-4","name":"name-4","amount":0.25964582578194184},
-              {"id":"id-5","name":"name-5","amount":0.38139159093466957},
-              {"id":"id-6","name":"name-6","amount":0.17474610861916506},
-              {"id":"id-7","name":"name-7","amount":0.4189403113773893},
-              {"id":"id-8","name":"name-8","amount":0.5271120160280915},
-              {"id":"id-9","name":"name-9","amount":0.8987989549493004},
-              {"id":"id-10","name":"name-10","amount":0.4807438429494699},
-              {"id":"id-11","name":"name-11","amount":0.5332755023740098},
-              {"id":"id-12","name":"name-12","amount":0.6976230485464633},
-              {"id":"id-13","name":"name-13","amount":0.09671955898326412},
-              {"id":"id-14","name":"name-14","amount":0.30549921001351843},
-              {"id":"id-15","name":"name-15","amount":0.43528524349432507},
-              {"id":"id-16","name":"name-16","amount":0.9453624566586487},
-              {"id":"id-17","name":"name-17","amount":0.05704818015716806},
-              {"id":"id-18","name":"name-18","amount":0.43120864029196615},
-              {"id":"id-19","name":"name-19","amount":0.20097620287627593},
-              {"id":"id-20","name":"name-20","amount":0.023870175105789815},
-              {"id":"id-21","name":"name-21","amount":0.6101160322477294},
-              {"id":"id-22","name":"name-22","amount":0.4088094321825314},
-              {"id":"id-23","name":"name-23","amount":0.08300952297473263},
-              {"id":"id-24","name":"name-24","amount":0.12504670009000096},
-              {"id":"id-25","name":"name-25","amount":0.518303087684911},
-              {"id":"id-26","name":"name-26","amount":0.3221451950530061},
-              {"id":"id-27","name":"name-27","amount":0.9493926917244657},
-              {"id":"id-28","name":"name-28","amount":0.43084232520937127},
-              {"id":"id-29","name":"name-29","amount":0.6655144485955925},
-              {"id":"id-30","name":"name-30","amount":0.18007356271725683},
-              {"id":"id-31","name":"name-31","amount":0.18782901155170595},
-              {"id":"id-32","name":"name-32","amount":0.6414756809785865},
-              {"id":"id-33","name":"name-33","amount":0.6967652340928207},
-              {"id":"id-34","name":"name-34","amount":0.8478012471348878},
-              {"id":"id-35","name":"name-35","amount":0.6513158370058272},
-              {"id":"id-36","name":"name-36","amount":0.4329704984630125},
-              {"id":"id-37","name":"name-37","amount":0.2913763093918671},
-              {"id":"id-38","name":"name-38","amount":0.5508023928846899},
-              {"id":"id-39","name":"name-39","amount":0.537967413438205},
-              {"id":"id-40","name":"name-40","amount":0.6219954774542281},
-              {"id":"id-41","name":"name-41","amount":0.39879067237843546},
-              {"id":"id-42","name":"name-42","amount":0.7629961081510588},
-              {"id":"id-43","name":"name-43","amount":0.32166926107483884},
-              {"id":"id-44","name":"name-44","amount":0.7974372357134749},
-              {"id":"id-45","name":"name-45","amount":0.31777826942541687},
-              {"id":"id-46","name":"name-46","amount":0.725429611817799},
-              {"id":"id-47","name":"name-47","amount":0.9800548396982387},
-              {"id":"id-48","name":"name-48","amount":0.3158313676701293},
-              {"id":"id-49","name":"name-49","amount":0.457805330244474},
-              {"id":"id-50","name":"name-50","amount":0.9325335013957207},
-              {"id":"id-51","name":"name-51","amount":0.802427884275116},
-              {"id":"id-52","name":"name-52","amount":0.8517223042362233},
-              {"id":"id-53","name":"name-53","amount":0.9856009797106693},
-              {"id":"id-54","name":"name-54","amount":0.6700862261981534},
-              {"id":"id-55","name":"name-55","amount":0.0026363047162140107},
-              {"id":"id-56","name":"name-56","amount":0.14421786720161966},
-              {"id":"id-57","name":"name-57","amount":0.3304630752374883},
-              {"id":"id-58","name":"name-58","amount":0.09234512485807367},
-              {"id":"id-59","name":"name-59","amount":0.2105367428993551},
-              {"id":"id-60","name":"name-60","amount":0.18744961394369009},
-              {"id":"id-61","name":"name-61","amount":0.698601641493707},
-              {"id":"id-62","name":"name-62","amount":0.3853713112484868},
-              {"id":"id-63","name":"name-63","amount":0.6705713764173211},
-              {"id":"id-64","name":"name-64","amount":0.8753454795365039},
-              {"id":"id-65","name":"name-65","amount":0.32982759248387894},
-              {"id":"id-66","name":"name-66","amount":0.27939663903085465},
-              {"id":"id-67","name":"name-67","amount":0.6371116327283778},
-              {"id":"id-68","name":"name-68","amount":0.030066635161358435},
-              {"id":"id-69","name":"name-69","amount":0.21915069869744774},
-              {"id":"id-70","name":"name-70","amount":0.5451508115486596},
-              {"id":"id-71","name":"name-71","amount":0.023606086407824023},
-              {"id":"id-72","name":"name-72","amount":0.818655521473932},
-              {"id":"id-73","name":"name-73","amount":0.42135965151004373},
-              {"id":"id-74","name":"name-74","amount":0.1373870101277359},
-              {"id":"id-75","name":"name-75","amount":0.8362027308842719},
-              {"id":"id-76","name":"name-76","amount":0.7938876369477443},
-              {"id":"id-77","name":"name-77","amount":0.8584146643878435},
-              {"id":"id-78","name":"name-78","amount":0.333415309251069},
-              {"id":"id-79","name":"name-79","amount":0.302398567557286},
-              {"id":"id-80","name":"name-80","amount":0.18301464229373787},
-              {"id":"id-81","name":"name-81","amount":0.7574904333878862},
-              {"id":"id-82","name":"name-82","amount":0.5552725006773063},
-              {"id":"id-83","name":"name-83","amount":0.8914024418648864},
-              {"id":"id-84","name":"name-84","amount":0.5920320090550005},
-              {"id":"id-85","name":"name-85","amount":0.4617657394638087},
-              {"id":"id-86","name":"name-86","amount":0.5612281578340027},
-              {"id":"id-87","name":"name-87","amount":0.6152794581363733},
-              {"id":"id-88","name":"name-88","amount":0.9932996013010392},
-              {"id":"id-89","name":"name-89","amount":0.376563023683678},
-              {"id":"id-90","name":"name-90","amount":0.3456466925936158},
-              {"id":"id-91","name":"name-91","amount":0.09857874715454862},
-              {"id":"id-92","name":"name-92","amount":0.7207886363289326},
-              {"id":"id-93","name":"name-93","amount":0.24019998818480826},
-              {"id":"id-94","name":"name-94","amount":0.39579517464046776},
-              {"id":"id-95","name":"name-95","amount":0.9090284580758808},
-              {"id":"id-96","name":"name-96","amount":0.20992425788417224},
-              {"id":"id-97","name":"name-97","amount":0.7419223475707288},
-              {"id":"id-98","name":"name-98","amount":0.9200077825369453},
-              {"id":"id-99","name":"name-99","amount":0.5530152968276794}
+              {"id":"id-0","name":"name-0","amount":0.31158560723320217},
+              {"id":"id-1","name":"name-1","amount":0.177507771818731},
+              {"id":"id-2","name":"name-2","amount":0.4967702152928779},
+              {"id":"id-3","name":"name-3","amount":0.7316587925159719},
+              {"id":"id-4","name":"name-4","amount":0.8199643236674657},
+              {"id":"id-5","name":"name-5","amount":0.9068352687435002},
+              {"id":"id-6","name":"name-6","amount":0.4283132762142241},
+              {"id":"id-7","name":"name-7","amount":0.5306996827462501},
+              {"id":"id-8","name":"name-8","amount":0.8418053867763183},
+              {"id":"id-9","name":"name-9","amount":0.8554224927786067},
+              {"id":"id-10","name":"name-10","amount":0.8432838935753145},
+              {"id":"id-11","name":"name-11","amount":0.9840100707555643},
+              {"id":"id-12","name":"name-12","amount":0.8590675223064411},
+              {"id":"id-13","name":"name-13","amount":0.9880633916018974},
+              {"id":"id-14","name":"name-14","amount":0.9716206809707801},
+              {"id":"id-15","name":"name-15","amount":0.15624655458674952},
+              {"id":"id-16","name":"name-16","amount":0.7423845944505477},
+              {"id":"id-17","name":"name-17","amount":0.5401188618911492},
+              {"id":"id-18","name":"name-18","amount":0.477336597820452},
+              {"id":"id-19","name":"name-19","amount":0.09010214758008128},
+              {"id":"id-20","name":"name-20","amount":0.6715332174517501},
+              {"id":"id-21","name":"name-21","amount":9.728406214718488E-4},
+              {"id":"id-22","name":"name-22","amount":0.8063798839544547},
+              {"id":"id-23","name":"name-23","amount":0.7932705770779507},
+              {"id":"id-24","name":"name-24","amount":0.8323561585898025},
+              {"id":"id-25","name":"name-25","amount":0.35240648160565813},
+              {"id":"id-26","name":"name-26","amount":0.8912273930015874},
+              {"id":"id-27","name":"name-27","amount":0.9171723464769101},
+              {"id":"id-28","name":"name-28","amount":0.6593371052337892},
+              {"id":"id-29","name":"name-29","amount":0.4680487659070448},
+              {"id":"id-30","name":"name-30","amount":0.12447233844743266},
+              {"id":"id-31","name":"name-31","amount":0.3055739141196111},
+              {"id":"id-32","name":"name-32","amount":0.3432178908243696},
+              {"id":"id-33","name":"name-33","amount":0.8505700199605483},
+              {"id":"id-34","name":"name-34","amount":0.4169884652367203},
+              {"id":"id-35","name":"name-35","amount":0.9398638495598954},
+              {"id":"id-36","name":"name-36","amount":0.42949406713600113},
+              {"id":"id-37","name":"name-37","amount":0.5600423783904751},
+              {"id":"id-38","name":"name-38","amount":0.7158235309861588},
+              {"id":"id-39","name":"name-39","amount":0.0626327189456164},
+              {"id":"id-40","name":"name-40","amount":0.59632056110498},
+              {"id":"id-41","name":"name-41","amount":0.2698987809564303},
+              {"id":"id-42","name":"name-42","amount":0.5727948616040658},
+              {"id":"id-43","name":"name-43","amount":0.42233626470963814},
+              {"id":"id-44","name":"name-44","amount":0.11930405223589502},
+              {"id":"id-45","name":"name-45","amount":0.8761806778724412},
+              {"id":"id-46","name":"name-46","amount":0.22683030531175186},
+              {"id":"id-47","name":"name-47","amount":0.6492041506375802},
+              {"id":"id-48","name":"name-48","amount":0.1058542902449302},
+              {"id":"id-49","name":"name-49","amount":0.9812715080167906},
+              {"id":"id-50","name":"name-50","amount":0.19141779072305498},
+              {"id":"id-51","name":"name-51","amount":0.7461895291214218},
+              {"id":"id-52","name":"name-52","amount":0.31321173947743386},
+              {"id":"id-53","name":"name-53","amount":0.8750716524492309},
+              {"id":"id-54","name":"name-54","amount":0.5230977912101686},
+              {"id":"id-55","name":"name-55","amount":0.5586372675576546},
+              {"id":"id-56","name":"name-56","amount":0.251964297696915},
+              {"id":"id-57","name":"name-57","amount":0.344577598416984},
+              {"id":"id-58","name":"name-58","amount":0.787752522748806},
+              {"id":"id-59","name":"name-59","amount":0.872481903389703},
+              {"id":"id-60","name":"name-60","amount":0.3208111387633823},
+              {"id":"id-61","name":"name-61","amount":0.7570867102131756},
+              {"id":"id-62","name":"name-62","amount":0.23851632310165283},
+              {"id":"id-63","name":"name-63","amount":0.48316853879096633},
+              {"id":"id-64","name":"name-64","amount":0.918527195018137},
+              {"id":"id-65","name":"name-65","amount":0.382755969892176},
+              {"id":"id-66","name":"name-66","amount":0.8724523334846911},
+              {"id":"id-67","name":"name-67","amount":0.1761234547333249},
+              {"id":"id-68","name":"name-68","amount":0.8355265467012433},
+              {"id":"id-69","name":"name-69","amount":0.8490014521895705},
+              {"id":"id-70","name":"name-70","amount":0.8427100482664814},
+              {"id":"id-71","name":"name-71","amount":0.06448352307609817},
+              {"id":"id-72","name":"name-72","amount":0.7401193321269283},
+              {"id":"id-73","name":"name-73","amount":0.9522328988659804},
+              {"id":"id-74","name":"name-74","amount":0.16869965792085284},
+              {"id":"id-75","name":"name-75","amount":0.1409262975804505},
+              {"id":"id-76","name":"name-76","amount":0.24350090403266755},
+              {"id":"id-77","name":"name-77","amount":0.7916757203842696},
+              {"id":"id-78","name":"name-78","amount":0.8088884663833116},
+              {"id":"id-79","name":"name-79","amount":0.21782601510757882},
+              {"id":"id-80","name":"name-80","amount":0.8527082005399347},
+              {"id":"id-81","name":"name-81","amount":0.3355400044552055},
+              {"id":"id-82","name":"name-82","amount":0.9391456818364593},
+              {"id":"id-83","name":"name-83","amount":0.6535928038528598},
+              {"id":"id-84","name":"name-84","amount":0.10222312704215719},
+              {"id":"id-85","name":"name-85","amount":0.08155488672156697},
+              {"id":"id-86","name":"name-86","amount":0.7141318328573387},
+              {"id":"id-87","name":"name-87","amount":0.3929357393022205},
+              {"id":"id-88","name":"name-88","amount":0.2925982293297459},
+              {"id":"id-89","name":"name-89","amount":0.43189361573606433},
+              {"id":"id-90","name":"name-90","amount":0.8800495144218077},
+              {"id":"id-91","name":"name-91","amount":0.8849231331249953},
+              {"id":"id-92","name":"name-92","amount":0.5584252141057865},
+              {"id":"id-93","name":"name-93","amount":0.7667727579530089},
+              {"id":"id-94","name":"name-94","amount":0.35414216680346944},
+              {"id":"id-95","name":"name-95","amount":0.38509588346268675},
+              {"id":"id-96","name":"name-96","amount":0.43816217915769484},
+              {"id":"id-97","name":"name-97","amount":0.9715169422964253},
+              {"id":"id-98","name":"name-98","amount":0.28964861014232246},
+              {"id":"id-99","name":"name-99","amount":0.9965231534363673}
             ]}>
           </slim_table_list.TableListViewPaged>
         </ui_static.Div>
@@ -721,15 +721,14 @@ function TableListViewDemo(){
               }
             }}
             entries={[
-              {"currency_id":"DOGE","name":"QRS","balance":490,"escrow":34.0},
-              {"currency_id":"DOGE","name":"WXY","balance":456,"escrow":63},
-              {"currency_id":"DOGE","name":"KLM","balance":100,"escrow":0.5},
               {
               "currency_id":"STATS",
               "name":"NOP",
               "balance":1000,
               "escrow":50.5
             },
+              {"currency_id":"STATS","name":"ABC","balance":506,"escrow":50.5},
+              {"currency_id":"DOGE","name":"WXY","balance":456,"escrow":63},
               {
               "currency_id":"STATS",
               "name":"HIJ",
@@ -742,8 +741,9 @@ function TableListViewDemo(){
               "balance":34050,
               "escrow":50.5
             },
-              {"currency_id":"STATS","name":"ABC","balance":506,"escrow":50.5},
-              {"currency_id":"STATS","name":"TUV","balance":79,"escrow":37}
+              {"currency_id":"DOGE","name":"QRS","balance":490,"escrow":34.0},
+              {"currency_id":"STATS","name":"TUV","balance":79,"escrow":37},
+              {"currency_id":"DOGE","name":"KLM","balance":100,"escrow":0.5}
             ]}>
           </slim_table_list.TableListView>
         </ui_static.Div>
