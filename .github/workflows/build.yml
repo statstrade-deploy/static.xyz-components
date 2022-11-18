@@ -1,0 +1,19 @@
+name: build gh-pages
+'on': [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - {name: Checkout repo, uses: actions/checkout@v3}
+    - name: Node Setup
+      uses: actions/setup-node@v3
+      with: {node-version: 16.x}
+    - name: Deploy gh-pages
+      run: |-
+        npm install
+        npm expo build:web
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git --work-tree dist add --all
+        git commit -m 'deploying to gh-pages'
+        git push origin HEAD:gh-pages --force
