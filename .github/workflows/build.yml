@@ -10,8 +10,7 @@ jobs:
       with: {node-version: 16.x}
     - name: Deploy gh-pages
       run: |-
-        npm install
-        npx expo build:web
+        make build-web
         git config user.name github-actions
         git config user.email github-actions@github.com
         git --work-tree dist add --all
