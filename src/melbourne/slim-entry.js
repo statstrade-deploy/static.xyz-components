@@ -715,6 +715,9 @@ function compileEntry(props,EntryComponent){
   let {entry,display,components,key,views} = props;
   let eprops = k.obj_pick(props,ENTRY_PROPS);
   let impl = k.get_in(props,["impl"]) || {};
+  if(React.isValidElement(impl)){
+    return impl;
+  }
   while(k.fnp(impl.props)){
     impl = (impl.props(entry,props) || {});
   }
@@ -763,7 +766,7 @@ function compileEntry(props,EntryComponent){
   }
 }
 
-// melbourne.slim-entry/Entry [1160] 
+// melbourne.slim-entry/Entry [1163] 
 function Entry(props){
   return compileEntry(props,Entry);
 }

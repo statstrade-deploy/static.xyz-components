@@ -37,22 +37,21 @@ function SubmitButton({
   ...rprops
 }){
   let {mainBackground,mainPrimary} = base_palette.designPalette(design);
-  return (
-    <ui_text.ButtonMinor
-      disabled={disabled || waiting}
-      style={[
-        {"textAlign":"center","minWidth":100},
-        ...(Array.isArray(style) ? style : ((null == style) ? [] : [style]))
-      ]}
-      text={reset ? (resetText || "BACK") : (waiting ? (waitingText || (
-        <ReactNative.ActivityIndicator key="busy" color={mainPrimary} size={12}></ReactNative.ActivityIndicator>)) : (text || "SUBMIT"))}
-      design={design}
-      variant={variant}
-      {...rprops}>
-    </ui_text.ButtonMinor>);
+  return React.createElement(component || ui_text.ButtonMinor,{
+    design,
+    variant,
+    "disabled":disabled || waiting,
+    "style":[
+      {"textAlign":"center","minWidth":100},
+      ...(Array.isArray(style) ? style : ((null == style) ? [] : [style]))
+    ],
+    "text":reset ? (resetText || "BACK") : (waiting ? (waitingText || (
+      <ReactNative.ActivityIndicator key="busy" color={mainPrimary} size={12}></ReactNative.ActivityIndicator>)) : (text || "SUBMIT")),
+    ...rprops
+  });
 }
 
-// melbourne.slim-submit/SubmitLine [60] 
+// melbourne.slim-submit/SubmitLine [61] 
 function SubmitLine({
   design,
   mini,
@@ -113,7 +112,7 @@ function SubmitLine({
     </ReactNative.View>);
 }
 
-// melbourne.slim-submit/SubmitLineHelpers [122] 
+// melbourne.slim-submit/SubmitLineHelpers [123] 
 function SubmitLineHelpers({
   design,
   errored,
@@ -166,7 +165,7 @@ function SubmitLineHelpers({
     </>);
 }
 
-// melbourne.slim-submit/SubmitLineActions [167] 
+// melbourne.slim-submit/SubmitLineActions [168] 
 function SubmitLineActions({
   design,
   mini,
@@ -213,7 +212,7 @@ function SubmitLineActions({
     </SubmitLine>);
 }
 
-// melbourne.slim-submit/useSubmitField [213] 
+// melbourne.slim-submit/useSubmitField [214] 
 function useSubmitField({
   form,
   meta,
@@ -237,7 +236,7 @@ function useSubmitField({
   return {errored,onAction,onActionCheck,onActionPress,onActionReset,result,setResult,setWaiting,waiting};
 }
 
-// melbourne.slim-submit/useSubmitForm [262] 
+// melbourne.slim-submit/useSubmitForm [263] 
 function useSubmitForm({
   form,
   meta,
