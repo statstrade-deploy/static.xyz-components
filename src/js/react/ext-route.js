@@ -86,7 +86,7 @@ function useRouteSegment(route,path,defaultSegment){
   return [segment || defaultSegment,setSegment];
 }
 
-// js.react.ext-route/listenRouteParam [89] 
+// js.react.ext-route/listenRouteParam [86] 
 function listenRouteParam(route,param,defaultVal){
   let listener_id = React.useCallback(Math.random().toString(36).substr(2,4 || 4),[]);
   let [value,changeValue] = React.useState(event_route.get_param(route,param) || defaultVal);
@@ -101,7 +101,7 @@ function listenRouteParam(route,param,defaultVal){
   return value;
 }
 
-// js.react.ext-route/useRouteParam [104] 
+// js.react.ext-route/useRouteParam [101] 
 function useRouteParam(route,param,defaultVal,defaultFn){
   defaultFn = (defaultFn || k.identity);
   let paramRef = r.useFollowRef(param);
@@ -117,7 +117,7 @@ function useRouteParam(route,param,defaultVal,defaultFn){
   return [value || defaultVal,setValue];
 }
 
-// js.react.ext-route/useRouteParamFlag [122] 
+// js.react.ext-route/useRouteParamFlag [119] 
 function useRouteParamFlag(route,param,flagVal,defaultVal){
   let [value,setValue] = useRouteParam(route,param,defaultVal);
   let [flag,setFlag] = [

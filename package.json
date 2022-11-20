@@ -47,5 +47,6 @@
   },
   "metro" : {
     "watchFolders" : [ "assets" ]
-  }
+  },
+  "homepage" : "/static.xyz-components"
 }

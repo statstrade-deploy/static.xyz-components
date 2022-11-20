@@ -28,6 +28,7 @@ function ConfirmDialog(props){
     design,
     variant,
     text,
+    onPressIn,
     onPress,
     style,
     ...rprops
@@ -46,7 +47,10 @@ function ConfirmDialog(props){
         text,
         style,
         "onPress":function (){
-          return setVisible(!visible);
+          if(onPressIn){
+            onPressIn();
+          }
+          setVisible(!visible);
         },
         ...rprops
       })}

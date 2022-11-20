@@ -372,6 +372,7 @@ function convertIndex({
   data,
   value,
   setValue,
+  allowNotFound,
   valueFn = function (x){
   return x;
 }
@@ -381,7 +382,8 @@ function convertIndex({
     return out ? valueFn(out) : null;
   };
   let reverseFn = function (label){
-    return Math.max(0,data.map(valueFn).indexOf(label));
+    let idx = data.map(valueFn).indexOf(label);
+    return allowNotFound ? idx : Math.max(0,idx);
   };
   let setIndex = function (idx){
     setValue(forwardFn(idx));
@@ -391,7 +393,7 @@ function convertIndex({
   return {index,items,setIndex};
 }
 
-// js.react/convertModular [519] 
+// js.react/convertModular [521] 
 function convertModular({
   data,
   value,
@@ -419,7 +421,7 @@ function convertModular({
   return {index,items,setIndex};
 }
 
-// js.react/convertIndices [551] 
+// js.react/convertIndices [553] 
 function convertIndices({
   data,
   values,
@@ -451,7 +453,7 @@ function convertIndices({
   return {indices,items,setIndices};
 }
 
-// js.react/convertPosition [572] 
+// js.react/convertPosition [574] 
 function convertPosition({length,max,min,step}){
   let divisions = Math.floor((max - min) / step);
   let unit = length / divisions;
@@ -468,7 +470,7 @@ function convertPosition({length,max,min,step}){
   return {forwardFn,reverseFn};
 }
 
-// js.react/useChanging [592] 
+// js.react/useChanging [594] 
 function useChanging(data,f,state){
   f = (f || function (arr){
     return arr[0];
@@ -483,7 +485,7 @@ function useChanging(data,f,state){
   return [value,setValue];
 }
 
-// js.react/useTree [606] 
+// js.react/useTree [608] 
 function useTree({branchesFn,displayFn,formatFn,initial,parents,root,setInitial,targetFn,tree}){
   branchesFn = (branchesFn || function (tree,_parents,_root){
     if(tree){

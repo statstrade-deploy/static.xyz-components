@@ -296,6 +296,13 @@ function set_param(route,param,value,path){
   }
 }
 
+// xt.lang.event-route/reset-route [394] 
+function reset_route(route,url){
+  route["history"] = [];
+  route["tree"] = interim_to_tree(interim_from_url(url || ""),true);
+  set_url(route,url || "",true);
+}
+
 var MODULE = {
   "interim_from_url":interim_from_url,
   "interim_to_url":interim_to_url,
@@ -322,7 +329,8 @@ var MODULE = {
   "set_url":set_url,
   "set_path":set_path,
   "set_segment":set_segment,
-  "set_param":set_param
+  "set_param":set_param,
+  "reset_route":reset_route
 };
 
 export default MODULE
