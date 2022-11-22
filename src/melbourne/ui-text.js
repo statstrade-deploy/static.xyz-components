@@ -148,7 +148,7 @@ function Avatar(props){
     style,
     styleImage,
     styleText,
-    size = 50,
+    size = 40,
     imageProps = {},
     textProps = {}
   } = props;

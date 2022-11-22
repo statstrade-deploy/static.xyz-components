@@ -154,7 +154,6 @@ function ListIndexed({
         onPress={function (){
           if(i != index){
             setIndex(i);
-            console.log(" melbourne.ui-group/ListIndexed",175,"\n\n",i,onChange);
             if(onChange){
               onChange(i);
             }
@@ -190,9 +189,8 @@ function ListIndexed({
     </ReactNative.FlatList>);
 }
 
-// melbourne.ui-group/List [188] 
+// melbourne.ui-group/List [187] 
 function List({data,valueFn,value,setValue,allowNotFound,...rprops}){
-  console.log(" melbourne.ui-group/List",197,"\n\n",rprops);
   let {index,items,setIndex} = r.convertIndex({allowNotFound,data,setValue,value,valueFn});
   return (
     <ListIndexed setIndex={setIndex} items={items} index={index} {...rprops}></ListIndexed>);

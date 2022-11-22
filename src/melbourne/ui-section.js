@@ -17,13 +17,14 @@ var styleSection = {
   "borderRadius":3,
   "marginHorizontal":5,
   "marginVertical":5,
-  "padding":15,
+  "paddingVertical":5,
+  "paddingHorizontal":15,
   "minWidth":260,
   "maxWidth":500,
   "justifyItems":"center"
 };
 
-// melbourne.ui-section/SectionBase [35] 
+// melbourne.ui-section/SectionBase [36] 
 function SectionBase({design,variant,mini,style,styleTitle,title,action,children}){
   let Text = mini ? ui_text.H4 : ui_text.H3;
   return (
@@ -55,7 +56,7 @@ function SectionBase({design,variant,mini,style,styleTitle,title,action,children
     </ui_static.Div>);
 }
 
-// melbourne.ui-section/SectionSeparator [72] 
+// melbourne.ui-section/SectionSeparator [73] 
 function SectionSeparator({design,variant}){
   return (
     <ui_static.Separator
@@ -68,7 +69,7 @@ function SectionSeparator({design,variant}){
     </ui_static.Separator>);
 }
 
-// melbourne.ui-section/Section [87] 
+// melbourne.ui-section/Section [88] 
 function Section({design,variant,mini,title,action,children}){
   return (
     <SectionBase
@@ -83,7 +84,7 @@ function Section({design,variant,mini,title,action,children}){
     </SectionBase>);
 }
 
-// melbourne.ui-section/SectionFold [103] 
+// melbourne.ui-section/SectionFold [104] 
 function SectionFold({design,variant,mini,title,action,children,visible = false}){
   return (
     <SectionBase
@@ -100,7 +101,7 @@ function SectionFold({design,variant,mini,title,action,children,visible = false}
     </SectionBase>);
 }
 
-// melbourne.ui-section/CardBoundary [126] 
+// melbourne.ui-section/CardBoundary [127] 
 function CardBoundary({children,style}){
   return (
     <ReactNative.View
@@ -111,7 +112,7 @@ function CardBoundary({children,style}){
     </ReactNative.View>);
 }
 
-// melbourne.ui-section/EmptyButton [139] 
+// melbourne.ui-section/EmptyButton [140] 
 function EmptyButton({design,onPress,textButton,textHeader}){
   return (
     <>

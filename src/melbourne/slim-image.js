@@ -63,7 +63,7 @@ function FormImage({
           setPhoto={setPhoto}
           data={data}
           setWaiting={setWaiting}
-          size={mini ? 120 : 160}
+          size={mini ? 120 : 140}
           setData={setData}
           waiting={waiting}
           blob={blob}

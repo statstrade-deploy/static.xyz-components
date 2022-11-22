@@ -20,7 +20,7 @@ var PaletteBase = {
   "lightWarn":"#ffffe0",
   "darkNeutral":"#eee",
   "darkError":"#f55151",
-  "darkWarn":"#61604a"
+  "darkWarn":"#aaaae0"
 };
 
 // melbourne.base-palette/PalettePrimary [28] 
