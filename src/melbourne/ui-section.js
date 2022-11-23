@@ -44,8 +44,10 @@ function SectionBase({design,variant,mini,style,styleTitle,title,action,children
         }}>
         <Text
           style={[
+            {"fontFamily":"impact"},
             ...(Array.isArray(styleTitle) ? styleTitle : ((null == styleTitle) ? [] : [styleTitle]))
           ]}
+          variant={{"fg":{"key":"neutral"}}}
           children={title}
           design={design}>
         </Text>
@@ -56,7 +58,7 @@ function SectionBase({design,variant,mini,style,styleTitle,title,action,children
     </ui_static.Div>);
 }
 
-// melbourne.ui-section/SectionSeparator [73] 
+// melbourne.ui-section/SectionSeparator [76] 
 function SectionSeparator({design,variant}){
   return (
     <ui_static.Separator
@@ -69,7 +71,7 @@ function SectionSeparator({design,variant}){
     </ui_static.Separator>);
 }
 
-// melbourne.ui-section/Section [88] 
+// melbourne.ui-section/Section [91] 
 function Section({design,variant,mini,title,action,children}){
   return (
     <SectionBase
@@ -84,7 +86,7 @@ function Section({design,variant,mini,title,action,children}){
     </SectionBase>);
 }
 
-// melbourne.ui-section/SectionFold [104] 
+// melbourne.ui-section/SectionFold [107] 
 function SectionFold({design,variant,mini,title,action,children,visible = false}){
   return (
     <SectionBase
@@ -101,7 +103,7 @@ function SectionFold({design,variant,mini,title,action,children,visible = false}
     </SectionBase>);
 }
 
-// melbourne.ui-section/CardBoundary [127] 
+// melbourne.ui-section/CardBoundary [130] 
 function CardBoundary({children,style}){
   return (
     <ReactNative.View
@@ -112,7 +114,7 @@ function CardBoundary({children,style}){
     </ReactNative.View>);
 }
 
-// melbourne.ui-section/EmptyButton [140] 
+// melbourne.ui-section/EmptyButton [143] 
 function EmptyButton({design,onPress,textButton,textHeader}){
   return (
     <>
