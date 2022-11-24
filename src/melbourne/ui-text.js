@@ -94,16 +94,19 @@ var H5 = createHeaderFn("h5");
 // melbourne.ui-text/H6 [107] 
 var H6 = createHeaderFn("h6");
 
-// melbourne.ui-text/P [112] 
+// melbourne.ui-text/Bold [112] 
+var Bold = createTextFn("bold");
+
+// melbourne.ui-text/P [117] 
 var P = createTextFn("p");
 
-// melbourne.ui-text/Caption [117] 
+// melbourne.ui-text/Caption [122] 
 var Caption = createTextFn("caption",Object.assign({"opacity":0.8,"fontSize":10,"fontWeight":"500","padding":15},ReactNative.Platform.select({
   "ios":{"fontFamily":"Courier"},
   "default":{"fontFamily":"monospace"}
 })),{"bg":{"key":"background","mix":"primary","ratio":4}});
 
-// melbourne.ui-text/ActivityIndicator [132] 
+// melbourne.ui-text/ActivityIndicator [137] 
 function ActivityIndicator({refLink,name,size,style,design,variant,...rprops}){
   let palette = base_palette.designPalette(design);
   let {fg} = Object.assign({"fg":{"key":"primary"}},variant);
@@ -117,7 +120,7 @@ function ActivityIndicator({refLink,name,size,style,design,variant,...rprops}){
     </ReactNative.ActivityIndicator>);
 }
 
-// melbourne.ui-text/Icon [154] 
+// melbourne.ui-text/Icon [159] 
 function Icon({refLink,name,size,style,design,variant,...rprops}){
   let palette = base_palette.designPalette(design);
   let {bg,fg} = Object.assign({"fg":{"key":"neutral"}},variant);
@@ -137,7 +140,7 @@ function Icon({refLink,name,size,style,design,variant,...rprops}){
     </RNIcon>);
 }
 
-// melbourne.ui-text/Avatar [178] 
+// melbourne.ui-text/Avatar [183] 
 function Avatar(props){
   let {
     design,
@@ -204,7 +207,7 @@ function Avatar(props){
   }
 }
 
-// melbourne.ui-text/activeButtonTheme [235] 
+// melbourne.ui-text/activeButtonTheme [240] 
 function activeButtonTheme(bg,fg,bgPressed,fgPressed){
   return {
     "fg":fg,
@@ -215,7 +218,7 @@ function activeButtonTheme(bg,fg,bgPressed,fgPressed){
   };
 }
 
-// melbourne.ui-text/minorButtonTheme [251] 
+// melbourne.ui-text/minorButtonTheme [256] 
 function minorButtonTheme(bg,fg){
   return {
     "fg":fg,
@@ -226,7 +229,7 @@ function minorButtonTheme(bg,fg){
   };
 }
 
-// melbourne.ui-text/minorToggleTheme [270] 
+// melbourne.ui-text/minorToggleTheme [275] 
 function minorToggleTheme(bg,fg,fgActive){
   return {
     "fg":fg,
@@ -238,7 +241,7 @@ function minorToggleTheme(bg,fg,fgActive){
   };
 }
 
-// melbourne.ui-text/createMinorFn [289] 
+// melbourne.ui-text/createMinorFn [294] 
 function createMinorFn(component,variantFn,themeSelected,styleOverride,propsOverride){
   return function ({design,variant,style,selected,text,icon,...rprops}){
     text = (icon ? React.createElement(RNIcon,Object.assign({"key":"icon"},icon)) : text);
@@ -267,32 +270,32 @@ function createMinorFn(component,variantFn,themeSelected,styleOverride,propsOver
   };
 }
 
-// melbourne.ui-text/ButtonMinor [328] 
+// melbourne.ui-text/ButtonMinor [333] 
 var ButtonMinor = createMinorFn(ui_button.Button,function (){
   return minorButtonTheme({"key":"background"},{"key":"primary"});
 },true);
 
-// melbourne.ui-text/ToggleMinor [338] 
+// melbourne.ui-text/ToggleMinor [343] 
 var ToggleMinor = createMinorFn(ui_toggle_button.ToggleButton,function (){
   return minorToggleTheme({"key":"background"},{"key":"primary"},{"key":"primary"});
 });
 
-// melbourne.ui-text/ToggleTabMinor [348] 
+// melbourne.ui-text/ToggleTabMinor [353] 
 var ToggleTabMinor = createMinorFn(ui_toggle_button.ToggleButton,function (){
   return minorToggleTheme({"key":"background"},{"key":"neutral"},{"key":"primary"});
 });
 
-// melbourne.ui-text/TabsMinor [358] 
+// melbourne.ui-text/TabsMinor [363] 
 var TabsMinor = createMinorFn(ui_group.Tabs,function (){
   return minorToggleTheme({"key":"background"},{"key":"neutral"},{"key":"primary"});
 },true,{},{"styleContainer":{"margin":0,"marginHorizontal":2}});
 
-// melbourne.ui-text/EnumMinor [372] 
+// melbourne.ui-text/EnumMinor [377] 
 var EnumMinor = createMinorFn(ui_group.EnumMulti,function (){
   return minorToggleTheme({"key":"background"},{"key":"neutral"},{"key":"primary"});
 },true,{},{"styleContainer":{"margin":0,"marginHorizontal":2}});
 
-// melbourne.ui-text/accentButtonTheme [391] 
+// melbourne.ui-text/accentButtonTheme [396] 
 function accentButtonTheme(bg,fg){
   return {
     "fg":fg,
@@ -309,7 +312,7 @@ function accentButtonTheme(bg,fg){
   };
 }
 
-// melbourne.ui-text/accentToggleTheme [413] 
+// melbourne.ui-text/accentToggleTheme [418] 
 function accentToggleTheme(bg,fg,bgActive,fgActive){
   return {
     "fg":fg,
@@ -321,7 +324,7 @@ function accentToggleTheme(bg,fg,bgActive,fgActive){
   };
 }
 
-// melbourne.ui-text/createAccentFn [431] 
+// melbourne.ui-text/createAccentFn [436] 
 function createAccentFn(component,variantFn,themeSelected,styleOverride,propsOverride){
   return function ({design,variant,style,selected,text,icon,...rprops}){
     text = (icon ? React.createElement(RNIcon,Object.assign({"key":"icon"},icon)) : text);
@@ -350,12 +353,12 @@ function createAccentFn(component,variantFn,themeSelected,styleOverride,propsOve
   };
 }
 
-// melbourne.ui-text/ButtonAccent [470] 
+// melbourne.ui-text/ButtonAccent [475] 
 var ButtonAccent = createAccentFn(ui_button.Button,function (){
   return accentButtonTheme({"key":"primary"},{"key":"background","tone":"augment"});
 });
 
-// melbourne.ui-text/ToggleAccent [481] 
+// melbourne.ui-text/ToggleAccent [486] 
 var ToggleAccent = createAccentFn(ui_toggle_button.ToggleButton,function (){
   return accentToggleTheme(
     {"key":"primary"},
@@ -365,7 +368,7 @@ var ToggleAccent = createAccentFn(ui_toggle_button.ToggleButton,function (){
   );
 });
 
-// melbourne.ui-text/ToggleTabAccent [493] 
+// melbourne.ui-text/ToggleTabAccent [498] 
 var ToggleTabAccent = createAccentFn(ui_toggle_button.ToggleButton,function (){
   return accentToggleTheme(
     {"key":"background"},
@@ -375,7 +378,7 @@ var ToggleTabAccent = createAccentFn(ui_toggle_button.ToggleButton,function (){
   );
 });
 
-// melbourne.ui-text/TabsAccent [505] 
+// melbourne.ui-text/TabsAccent [510] 
 var TabsAccent = createAccentFn(ui_group.Tabs,function (){
   return accentToggleTheme(
     {"key":"background"},
@@ -385,7 +388,7 @@ var TabsAccent = createAccentFn(ui_group.Tabs,function (){
   );
 },null,{},{"styleContainer":{"margin":0,"marginHorizontal":2}});
 
-// melbourne.ui-text/TabsAccentNeutral [521] 
+// melbourne.ui-text/TabsAccentNeutral [526] 
 var TabsAccentNeutral = createAccentFn(ui_group.Tabs,function (){
   return accentToggleTheme(
     {"key":"background"},
@@ -395,7 +398,7 @@ var TabsAccentNeutral = createAccentFn(ui_group.Tabs,function (){
   );
 },null,{},{"styleContainer":{"margin":0,"marginHorizontal":2}});
 
-// melbourne.ui-text/EnumAccent [537] 
+// melbourne.ui-text/EnumAccent [542] 
 var EnumAccent = createAccentFn(ui_group.EnumMulti,function (){
   return accentToggleTheme(
     {"key":"background"},
@@ -405,7 +408,7 @@ var EnumAccent = createAccentFn(ui_group.EnumMulti,function (){
   );
 },null,{},{"styleContainer":{"margin":0,"marginHorizontal":2}});
 
-// melbourne.ui-text/ButtonTooltipOverlay [558] 
+// melbourne.ui-text/ButtonTooltipOverlay [563] 
 function ButtonTooltipOverlay(props){
   let {
     hostRef,
@@ -432,7 +435,7 @@ function ButtonTooltipOverlay(props){
     },arrow)},rtooltip),React.createElement(mainComponent,props));
 }
 
-// melbourne.ui-text/ButtonTooltip [596] 
+// melbourne.ui-text/ButtonTooltip [601] 
 function ButtonTooltip({
   component = "minor",
   design,
@@ -476,7 +479,7 @@ function ButtonTooltip({
     </>);
 }
 
-// melbourne.ui-text/ConfirmTooltip [643] 
+// melbourne.ui-text/ConfirmTooltip [648] 
 function ConfirmTooltip(props){
   let {confirmText,...rprops} = props;
   let mainComponent = React.useCallback(function (props){
@@ -506,7 +509,7 @@ function ConfirmTooltip(props){
   return React.createElement(ButtonTooltip,Object.assign({mainComponent},props));
 }
 
-// melbourne.ui-text/TextAltImpl [669] 
+// melbourne.ui-text/TextAltImpl [674] 
 function TextAltImpl({design,init = false,disabled,value,children}){
   let [showText,setShowText] = React.useState(init);
   return (
@@ -526,7 +529,7 @@ function TextAltImpl({design,init = false,disabled,value,children}){
     </>);
 }
 
-// melbourne.ui-text/TextAlt [700] 
+// melbourne.ui-text/TextAlt [705] 
 function TextAlt({design,init,disabled,value,children}){
   let {Consumer} = globalThis["js_react_native$$Global"];
   return (
@@ -554,6 +557,7 @@ var MODULE = {
   "H4":H4,
   "H5":H5,
   "H6":H6,
+  "Bold":Bold,
   "P":P,
   "Caption":Caption,
   "ActivityIndicator":ActivityIndicator,

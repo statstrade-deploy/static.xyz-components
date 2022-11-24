@@ -208,12 +208,17 @@ function EntryContentTitle(props){
   return entryContentText(props,ui_text.H6);
 }
 
-// melbourne.slim-entry/EntryContentParagraph [291] 
+// melbourne.slim-entry/EntryContentBold [291] 
+function EntryContentBold(props){
+  return entryContentText(props,ui_text.Bold);
+}
+
+// melbourne.slim-entry/EntryContentParagraph [297] 
 function EntryContentParagraph(props){
   return entryContentText(props,ui_text.P);
 }
 
-// melbourne.slim-entry/EntryContentIcon [297] 
+// melbourne.slim-entry/EntryContentIcon [303] 
 function EntryContentIcon(props){
   let {display,entry,impl} = props;
   let {key,template,format = k.identity,...iprops} = impl;
@@ -222,7 +227,7 @@ function EntryContentIcon(props){
   return React.createElement(ui_text.Icon,Object.assign({},props,iprops,{name},cprops));
 }
 
-// melbourne.slim-entry/EntryContentImage [320] 
+// melbourne.slim-entry/EntryContentImage [326] 
 function EntryContentImage(props){
   let {entry,impl} = props;
   let {key,text,style,image,color,format = k.identity,...iprops} = impl;
@@ -245,7 +250,7 @@ function EntryContentImage(props){
   },iprops,cprops));
 }
 
-// melbourne.slim-entry/EntryContentPair [362] 
+// melbourne.slim-entry/EntryContentPair [368] 
 function EntryContentPair(props){
   let {design,entry,impl,mini} = props;
   let {key,style,title,text,body} = impl;
@@ -260,7 +265,7 @@ function EntryContentPair(props){
     </n.Row>);
 }
 
-// melbourne.slim-entry/FIELD_COMPONENTS [397] 
+// melbourne.slim-entry/FIELD_COMPONENTS [403] 
 var FIELD_COMPONENTS = {
   "link_readonly":slim_link.FormLinkEntryReadOnly,
   "link_dropdown":slim_link.FormLinkDropdown,
@@ -281,7 +286,7 @@ var FIELD_COMPONENTS = {
   "text":slim_common.FormTextArea
 };
 
-// melbourne.slim-entry/EntryContentField [418] 
+// melbourne.slim-entry/EntryContentField [424] 
 function EntryContentField(props){
   let {impl,display,...rprops} = props;
   let {component,key,field,fieldProps,...iprops} = impl;
@@ -299,7 +304,7 @@ function EntryContentField(props){
   return React.createElement(FieldComponent,aprops);
 }
 
-// melbourne.slim-entry/EntryLayoutFormFade [445] 
+// melbourne.slim-entry/EntryLayoutFormFade [451] 
 function EntryLayoutFormFade(props){
   let {impl,form} = props;
   let {body,watch,template,...iprops} = impl;
@@ -311,7 +316,7 @@ function EntryLayoutFormFade(props){
   );
 }
 
-// melbourne.slim-entry/EntryLayoutFormFold [461] 
+// melbourne.slim-entry/EntryLayoutFormFold [467] 
 function EntryLayoutFormFold(props){
   let {impl,form} = props;
   let {body,watch,template,...iprops} = impl;
@@ -320,12 +325,12 @@ function EntryLayoutFormFold(props){
     <ReactNative.View>{body}</ReactNative.View>));
 }
 
-// melbourne.slim-entry/entrySubmitType [477] 
+// melbourne.slim-entry/entrySubmitType [483] 
 function entrySubmitType(submit,submitType){
   return (k.fnp(submit) ? "custom" : null) || submitType || ((submit == "create") ? "form" : ((submit == "detail") ? "id" : ((submit == "modify") ? "modify" : "entry")));
 }
 
-// melbourne.slim-entry/entryOnSubmit [496] 
+// melbourne.slim-entry/entryOnSubmit [502] 
 function entryOnSubmit(submitFn,submitType,entry,form,props,args){
   args = (args || []);
   return (submitType == "custom") ? function (){
@@ -347,14 +352,14 @@ function entryOnSubmit(submitFn,submitType,entry,form,props,args){
   }))))));
 }
 
-// melbourne.slim-entry/entryControlFn [528] 
+// melbourne.slim-entry/entryControlFn [534] 
 function entryControlFn(control,type,props){
   return (type == "list") ? control.setShowList : ((type == "modify") ? control.setShowModify : ((type == "detail") ? control.setShowDetail : ((type == "create") ? control.setShowCreate : (k.fnp(type) ? function (){
     type(control,props);
   } : control[type]))));
 }
 
-// melbourne.slim-entry/entryOnControl [550] 
+// melbourne.slim-entry/entryOnControl [556] 
 function entryOnControl(control,controlType,entry,props){
   if(!controlType){
     return function (){
@@ -380,7 +385,7 @@ function entryOnControl(control,controlType,entry,props){
   return entryOnSubmit(onControl,null,entry,props);
 }
 
-// melbourne.slim-entry/EntryContentControl [577] 
+// melbourne.slim-entry/EntryContentControl [583] 
 function EntryContentControl(props){
   let {impl,entry,control,...rprops} = props;
   let {component = "minor",key,submitType,submit,popup,...iprops} = impl;
@@ -400,7 +405,7 @@ function EntryContentControl(props){
   },iprops,fprops));
 }
 
-// melbourne.slim-entry/EntryLayoutControl [617] 
+// melbourne.slim-entry/EntryLayoutControl [623] 
 function EntryLayoutControl(props){
   let {impl,entry,control,...rprops} = props;
   let {submit,body,...iprops} = impl;
@@ -412,7 +417,7 @@ function EntryLayoutControl(props){
   );
 }
 
-// melbourne.slim-entry/EntryContentLink [631] 
+// melbourne.slim-entry/EntryContentLink [637] 
 function EntryContentLink(props){
   let {impl,form,entry,route,...rprops} = props;
   let {component = "minor",key,template,...iprops} = impl;
@@ -428,7 +433,7 @@ function EntryContentLink(props){
   },iprops,fprops));
 }
 
-// melbourne.slim-entry/EntryLayoutLink [664] 
+// melbourne.slim-entry/EntryLayoutLink [670] 
 function EntryLayoutLink(props){
   let {impl,form,entry,route,...rprops} = props;
   let {key,template,body,...iprops} = impl;
@@ -443,7 +448,7 @@ function EntryLayoutLink(props){
   );
 }
 
-// melbourne.slim-entry/EntryContentRoute [683] 
+// melbourne.slim-entry/EntryContentRoute [689] 
 function EntryContentRoute(props){
   let {impl,mini,form,entry,control,...rprops} = props;
   let {component = "minor",key,submit,...iprops} = impl;
@@ -467,7 +472,7 @@ function EntryContentRoute(props){
   }
 }
 
-// melbourne.slim-entry/EntryContentRouteToggle [734] 
+// melbourne.slim-entry/EntryContentRouteToggle [740] 
 function EntryContentRouteToggle(props){
   let {impl,mini,form,entry,control,...rprops} = props;
   let {component = "minor",key,submit,valueOn,valueOff,...iprops} = impl;
@@ -483,7 +488,7 @@ function EntryContentRouteToggle(props){
   },iprops,fprops));
 }
 
-// melbourne.slim-entry/EntryContentAction [774] 
+// melbourne.slim-entry/EntryContentAction [780] 
 function EntryContentAction(props){
   let {impl,form,entry,actions,...rprops} = props;
   let {
@@ -523,7 +528,7 @@ function EntryContentAction(props){
   return React.createElement(ActionComponent,output);
 }
 
-// melbourne.slim-entry/EntryContentSubmit [846] 
+// melbourne.slim-entry/EntryContentSubmit [852] 
 function EntryContentSubmit(props){
   let {impl,form,actions = {},entry,...rprops} = props;
   let {
@@ -564,7 +569,7 @@ function EntryContentSubmit(props){
   );
 }
 
-// melbourne.slim-entry/EntryLayoutCard [916] 
+// melbourne.slim-entry/EntryLayoutCard [922] 
 function EntryLayoutCard(props){
   let {design,impl,...rprops} = props;
   let {body,style,variant,...rimpl} = impl;
@@ -598,7 +603,7 @@ function EntryLayoutCard(props){
     </ui_static.Div>);
 }
 
-// melbourne.slim-entry/EntryLayoutForm [961] 
+// melbourne.slim-entry/EntryLayoutForm [967] 
 function EntryLayoutForm(props){
   let {impl,form,actions = {},entry,...rprops} = props;
   let {body,style} = impl;
@@ -609,7 +614,7 @@ function EntryLayoutForm(props){
     </ReactNative.View>);
 }
 
-// melbourne.slim-entry/ENTRY_PROPS [980] 
+// melbourne.slim-entry/ENTRY_PROPS [986] 
 var ENTRY_PROPS = [
   "design",
   "variant",
@@ -629,8 +634,9 @@ var ENTRY_PROPS = [
   "setVisible"
 ];
 
-// melbourne.slim-entry/ENTRY_COMPONENTS [998] 
+// melbourne.slim-entry/ENTRY_COMPONENTS [1004] 
 var ENTRY_COMPONENTS = {
+  "bold":EntryContentBold,
   "link_layout":EntryLayoutLink,
   "popup":EntryLayoutPopup,
   "v":EntryLayoutVertical,
@@ -669,7 +675,7 @@ var ENTRY_COMPONENTS = {
   "control_layout":EntryLayoutControl
 };
 
-// melbourne.slim-entry/ENTRY_LAYOUT [1039] 
+// melbourne.slim-entry/ENTRY_LAYOUT [1046] 
 var ENTRY_LAYOUT = {
   "link_layout":true,
   "popup":true,
@@ -688,7 +694,7 @@ var ENTRY_LAYOUT = {
   "control_layout":true
 };
 
-// melbourne.slim-entry/compileEntryPopup [1056] 
+// melbourne.slim-entry/compileEntryPopup [1063] 
 function compileEntryPopup(props,compileFn){
   let {impl} = props;
   let eprops = k.obj_pick(props,ENTRY_PROPS);
@@ -710,7 +716,7 @@ function compileEntryPopup(props,compileFn){
   return React.createElement(EntryLayoutPopup,Object.assign({mainComponent},props));
 }
 
-// melbourne.slim-entry/compileEntry [1085] 
+// melbourne.slim-entry/compileEntry [1092] 
 function compileEntry(props,EntryComponent){
   let {entry,display,components,key,views} = props;
   let eprops = k.obj_pick(props,ENTRY_PROPS);
@@ -766,7 +772,7 @@ function compileEntry(props,EntryComponent){
   }
 }
 
-// melbourne.slim-entry/Entry [1163] 
+// melbourne.slim-entry/Entry [1170] 
 function Entry(props){
   return compileEntry(props,Entry);
 }
@@ -794,6 +800,7 @@ var MODULE = {
   "EntryContentTitleH4":EntryContentTitleH4,
   "EntryContentTitleH5":EntryContentTitleH5,
   "EntryContentTitle":EntryContentTitle,
+  "EntryContentBold":EntryContentBold,
   "EntryContentParagraph":EntryContentParagraph,
   "EntryContentIcon":EntryContentIcon,
   "EntryContentImage":EntryContentImage,
