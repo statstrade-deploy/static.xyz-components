@@ -143,15 +143,18 @@ function SpinnerValues({
     arrDigits.unshift({"type":"digit","order":i});
   };
   let digitFn = function ({order,type},i){
+    let limit = Math.pow(10,order);
+    let hideDigit = (0 == decimal) ? (value < limit) : false;
     if(type == "digit"){
       return (
-        <SpinnerDigit
-          key={"digit" + i}
-          index={Math.floor(value / Math.round(Math.pow(10,order)))}
-          style={styleDigit}
-          styleText={styleDigitText}
-          editable={editable}>
-        </SpinnerDigit>);
+        <ReactNative.View key={"digit" + i} style={hideDigit ? {"opacity":0} : null}>
+          <SpinnerDigit
+            index={Math.floor(value / Math.round(Math.pow(10,order)))}
+            style={styleDigit}
+            styleText={styleDigitText}
+            editable={editable}>
+          </SpinnerDigit>
+        </ReactNative.View>);
     }
     else if(type == "decimal"){
       return (
@@ -168,7 +171,7 @@ function SpinnerValues({
     <>{arrDigits.map(digitFn)}</>);
 }
 
-// js.react-native.ui-spinner/useSpinnerPosition [166] 
+// js.react-native.ui-spinner/useSpinnerPosition [174] 
 function useSpinnerPosition(value,setValue,valueRef,min,max){
   let position = React.useCallback(new ReactNative.Animated.Value(0),[]);
   let prevRef = React.useRef(value);
@@ -185,7 +188,7 @@ function useSpinnerPosition(value,setValue,valueRef,min,max){
   return position;
 }
 
-// js.react-native.ui-spinner/Spinner [185] 
+// js.react-native.ui-spinner/Spinner [194] 
 function Spinner({
   theme,
   themePipeline,
