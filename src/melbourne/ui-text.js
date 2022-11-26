@@ -472,14 +472,15 @@ function ButtonTooltip({
           return setVisible(!visible);
         }
       })}
-      {React.createElement(ButtonTooltipOverlay,Object.assign(
-        {hostRef,onPress,setVisible,tooltip,visible,"design":design,"variant":Object.assign({},k.get_in(design,["variant","tooltip"]))},
-        rprops
-      ))}
+      {React.createElement(ButtonTooltipOverlay,Object.assign({hostRef,onPress,setVisible,tooltip,visible,"design":design,"variant":Object.assign(
+          {},
+          k.get_in(design,["variant","tooltip"]),
+          k.get_in(tooltip,["overlay","variant"])
+        )},rprops))}
     </>);
 }
 
-// melbourne.ui-text/ConfirmTooltip [648] 
+// melbourne.ui-text/ConfirmTooltip [649] 
 function ConfirmTooltip(props){
   let {confirmText,...rprops} = props;
   let mainComponent = React.useCallback(function (props){
@@ -509,7 +510,7 @@ function ConfirmTooltip(props){
   return React.createElement(ButtonTooltip,Object.assign({mainComponent},props));
 }
 
-// melbourne.ui-text/TextAltImpl [674] 
+// melbourne.ui-text/TextAltImpl [675] 
 function TextAltImpl({design,init = false,disabled,value,children}){
   let [showText,setShowText] = React.useState(init);
   return (
@@ -529,7 +530,7 @@ function TextAltImpl({design,init = false,disabled,value,children}){
     </>);
 }
 
-// melbourne.ui-text/TextAlt [705] 
+// melbourne.ui-text/TextAlt [706] 
 function TextAlt({design,init,disabled,value,children}){
   let {Consumer} = globalThis["js_react_native$$Global"];
   return (

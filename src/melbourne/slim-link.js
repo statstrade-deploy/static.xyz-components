@@ -49,7 +49,6 @@ function FormLinkDropdown(props){
   let aprops = Object.assign({},props,props.fieldProps);
   let {field,form,viewArgs,viewKey,viewOpts,viewTemplate,views} = aprops;
   let {args,links} = useViewLink(aprops);
-  console.log(" melbourne.slim-link/FormLinkDropdown",60,"\n\n",views,aprops);
   return React.createElement(slim_select.FormDropdown,Object.assign({},{},props,{
     "key":JSON.stringify(args),
     "data":links.results,
@@ -62,7 +61,7 @@ function FormLinkDropdown(props){
   }));
 }
 
-// melbourne.slim-link/FormLinkReadOnly [74] 
+// melbourne.slim-link/FormLinkReadOnly [73] 
 function FormLinkReadOnly(props){
   let {field,form,viewArgs,viewKey,viewOpts,viewTemplate,views} = Object.assign({},props,props.fieldProps);
   let {args,links} = useViewLink({field,form,viewArgs,viewKey,viewOpts,views});
@@ -73,7 +72,7 @@ function FormLinkReadOnly(props){
   }));
 }
 
-// melbourne.slim-link/useViewLinkEntry [97] 
+// melbourne.slim-link/useViewLinkEntry [96] 
 function useViewLinkEntry({viewArgs,viewKey,viewOpts,views},entry,field){
   let links = ext_view.listenView(views[viewKey],"success");
   let {lookup,results} = links;
@@ -85,19 +84,9 @@ function useViewLinkEntry({viewArgs,viewKey,viewOpts,views},entry,field){
   return {args,links};
 }
 
-// melbourne.slim-link/FormLinkEntryReadOnly [119] 
+// melbourne.slim-link/FormLinkEntryReadOnly [118] 
 function FormLinkEntryReadOnly(props){
   let {entry,field,viewArgs,viewKey,viewOpts,viewTemplate,views} = Object.assign({},props,props.fieldProps);
-  console.log(
-    " melbourne.slim-link/FormLinkEntryReadOnly",
-    126,
-    "\n\n",
-    viewKey,
-    viewArgs,
-    views,
-    field,
-    entry
-  );
   let {args,links} = useViewLinkEntry({viewArgs,viewKey,viewOpts,views},entry,field);
   return React.createElement(slim_common.FormReadOnly,Object.assign({},props,{
     "template":function (e){
