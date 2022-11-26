@@ -550,13 +550,15 @@ function arr_keepf(arr,pred,f){
 // xt.lang.base-lib/arr-juxt [603] 
 function arr_juxt(arr,key_fn,val_fn){
   let out = {};
-  for(let e of arr){
-    out[key_fn(e)] = val_fn(e);
-  };
+  if(null != arr){
+    for(let e of arr){
+      out[key_fn(e)] = val_fn(e);
+    };
+  }
   return out;
 }
 
-// xt.lang.base-lib/arr-foldl [613] 
+// xt.lang.base-lib/arr-foldl [614] 
 function arr_foldl(arr,f,init){
   let out = init;
   for(let e of arr){
@@ -565,7 +567,7 @@ function arr_foldl(arr,f,init){
   return out;
 }
 
-// xt.lang.base-lib/arr-foldr [622] 
+// xt.lang.base-lib/arr-foldr [623] 
 function arr_foldr(arr,f,init){
   let out = init;
   for(let i = arr.length; i > 0; i = (i + -1)){
@@ -574,30 +576,32 @@ function arr_foldr(arr,f,init){
   return out;
 }
 
-// xt.lang.base-lib/arr-pipel [633] 
+// xt.lang.base-lib/arr-pipel [634] 
 function arr_pipel(arr,e){
   return arr_foldl(arr,step_thrush,e);
 }
 
-// xt.lang.base-lib/arr-piper [639] 
+// xt.lang.base-lib/arr-piper [640] 
 function arr_piper(arr,e){
   return arr_foldr(arr,step_thrush,e);
 }
 
-// xt.lang.base-lib/arr-group-by [645] 
+// xt.lang.base-lib/arr-group-by [646] 
 function arr_group_by(arr,key_fn,view_fn){
   let out = {};
-  for(let e of arr){
-    let g = key_fn(e);
-    let garr = out[g] || [];
-    out[g] = [];
-    garr.push(view_fn(e));
-    out[g] = garr;
-  };
+  if(null != arr){
+    for(let e of arr){
+      let g = key_fn(e);
+      let garr = out[g] || [];
+      out[g] = [];
+      garr.push(view_fn(e));
+      out[g] = garr;
+    };
+  }
   return out;
 }
 
-// xt.lang.base-lib/arr-range [658] 
+// xt.lang.base-lib/arr-range [660] 
 function arr_range(x){
   let arr = Array.isArray(x) ? x : [x];
   let arrlen = arr.length;
@@ -624,7 +628,7 @@ function arr_range(x){
   return out;
 }
 
-// xt.lang.base-lib/arr-intersection [684] 
+// xt.lang.base-lib/arr-intersection [686] 
 function arr_intersection(arr,other){
   let lu = {};
   for(let k of arr){
@@ -639,7 +643,7 @@ function arr_intersection(arr,other){
   return out;
 }
 
-// xt.lang.base-lib/arr-difference [695] 
+// xt.lang.base-lib/arr-difference [697] 
 function arr_difference(arr,other){
   let lu = {};
   for(let k of arr){
@@ -654,7 +658,7 @@ function arr_difference(arr,other){
   return out;
 }
 
-// xt.lang.base-lib/arr-union [706] 
+// xt.lang.base-lib/arr-union [708] 
 function arr_union(arr,other){
   let lu = {};
   for(let e of arr){
@@ -670,7 +674,7 @@ function arr_union(arr,other){
   return out;
 }
 
-// xt.lang.base-lib/arr-sort [721] 
+// xt.lang.base-lib/arr-sort [723] 
 function arr_sort(arr,key_fn,comp_fn){
   let out = Array.from(arr);
   out.sort(function (a,b){
@@ -679,7 +683,7 @@ function arr_sort(arr,key_fn,comp_fn){
   return out;
 }
 
-// xt.lang.base-lib/arr-sorted-merge [729] 
+// xt.lang.base-lib/arr-sorted-merge [731] 
 function arr_sorted_merge(arr,brr,comp_fn){
   arr = (arr || []);
   brr = (brr || []);
@@ -714,7 +718,7 @@ function arr_sorted_merge(arr,brr,comp_fn){
   return out;
 }
 
-// xt.lang.base-lib/arr-shuffle [764] 
+// xt.lang.base-lib/arr-shuffle [766] 
 function arr_shuffle(arr){
   let tmp_val = null;
   let tmp_idx = null;
@@ -728,7 +732,7 @@ function arr_shuffle(arr){
   return arr;
 }
 
-// xt.lang.base-lib/arr-pushl [778] 
+// xt.lang.base-lib/arr-pushl [780] 
 function arr_pushl(arr,v,n){
   arr.push(v);
   if(arr.length > n){
@@ -737,7 +741,7 @@ function arr_pushl(arr,v,n){
   return arr;
 }
 
-// xt.lang.base-lib/arr-pushr [787] 
+// xt.lang.base-lib/arr-pushr [789] 
 function arr_pushr(arr,v,n){
   arr.unshift(v);
   if(arr.length > n){
@@ -746,12 +750,12 @@ function arr_pushr(arr,v,n){
   return arr;
 }
 
-// xt.lang.base-lib/arr-join [796] 
+// xt.lang.base-lib/arr-join [798] 
 function arr_join(arr,s){
   return arr.join(s);
 }
 
-// xt.lang.base-lib/arr-interpose [802] 
+// xt.lang.base-lib/arr-interpose [804] 
 function arr_interpose(arr,elem){
   let out = [];
   for(let e of arr){
@@ -762,7 +766,7 @@ function arr_interpose(arr,elem){
   return out;
 }
 
-// xt.lang.base-lib/arr-repeat [813] 
+// xt.lang.base-lib/arr-repeat [815] 
 function arr_repeat(x,n){
   let out = [];
   for(let i = 0; i < (n - 0); i = (i + 1)){
@@ -771,13 +775,13 @@ function arr_repeat(x,n){
   return out;
 }
 
-// xt.lang.base-lib/arr-random [824] 
+// xt.lang.base-lib/arr-random [826] 
 function arr_random(arr){
   let idx = Math.floor(arr.length * Math.random());
   return arr[idx];
 }
 
-// xt.lang.base-lib/arr-normalise [831] 
+// xt.lang.base-lib/arr-normalise [833] 
 function arr_normalise(arr){
   let total = arr_foldl(arr,function (a,b){
     return a + b;
@@ -787,7 +791,7 @@ function arr_normalise(arr){
   });
 }
 
-// xt.lang.base-lib/arr-sample [838] 
+// xt.lang.base-lib/arr-sample [840] 
 function arr_sample(arr,dist){
   let q = Math.random();
   for(let i = 0; i < dist.length; ++i){
@@ -799,12 +803,12 @@ function arr_sample(arr,dist){
   };
 }
 
-// xt.lang.base-lib/arrayify [848] 
+// xt.lang.base-lib/arrayify [850] 
 function arrayify(x){
   return Array.isArray(x) ? x : ((null == x) ? [] : [x]);
 }
 
-// xt.lang.base-lib/obj-empty? [865] 
+// xt.lang.base-lib/obj-empty? [867] 
 function obj_emptyp(obj){
   for(let k of Object.keys(obj)){
     return false;
@@ -812,7 +816,7 @@ function obj_emptyp(obj){
   return true;
 }
 
-// xt.lang.base-lib/obj-not-empty? [873] 
+// xt.lang.base-lib/obj-not-empty? [875] 
 function obj_not_emptyp(obj){
   for(let k of Object.keys(obj)){
     return true;
@@ -820,7 +824,7 @@ function obj_not_emptyp(obj){
   return false;
 }
 
-// xt.lang.base-lib/obj-first-key [881] 
+// xt.lang.base-lib/obj-first-key [883] 
 function obj_first_key(obj){
   for(let k of Object.keys(obj)){
     return k;
@@ -828,7 +832,7 @@ function obj_first_key(obj){
   return null;
 }
 
-// xt.lang.base-lib/obj-first-val [889] 
+// xt.lang.base-lib/obj-first-val [891] 
 function obj_first_val(obj){
   for(let v of Object.values(obj)){
     return v;
@@ -836,7 +840,7 @@ function obj_first_val(obj){
   return null;
 }
 
-// xt.lang.base-lib/obj-keys [897] 
+// xt.lang.base-lib/obj-keys [899] 
 function obj_keys(obj){
   let out = [];
   if(null != obj){
@@ -847,7 +851,7 @@ function obj_keys(obj){
   return out;
 }
 
-// xt.lang.base-lib/obj-vals [907] 
+// xt.lang.base-lib/obj-vals [909] 
 function obj_vals(obj){
   let out = [];
   if(null != obj){
@@ -858,7 +862,7 @@ function obj_vals(obj){
   return out;
 }
 
-// xt.lang.base-lib/obj-pairs [917] 
+// xt.lang.base-lib/obj-pairs [919] 
 function obj_pairs(obj){
   let out = [];
   if(null != obj){
@@ -869,7 +873,7 @@ function obj_pairs(obj){
   return out;
 }
 
-// xt.lang.base-lib/obj-clone [927] 
+// xt.lang.base-lib/obj-clone [929] 
 function obj_clone(obj){
   let out = {};
   if(null != obj){
@@ -880,7 +884,7 @@ function obj_clone(obj){
   return out;
 }
 
-// xt.lang.base-lib/obj-assign [937] 
+// xt.lang.base-lib/obj-assign [939] 
 function obj_assign(obj,m){
   if(null == obj){
     obj = {};
@@ -893,7 +897,7 @@ function obj_assign(obj,m){
   return obj;
 }
 
-// xt.lang.base-lib/obj-assign-nested [948] 
+// xt.lang.base-lib/obj-assign-nested [950] 
 function obj_assign_nested(obj,m){
   if(null == obj){
     obj = {};
@@ -912,7 +916,7 @@ function obj_assign_nested(obj,m){
   return obj;
 }
 
-// xt.lang.base-lib/obj-assign-with [965] 
+// xt.lang.base-lib/obj-assign-with [967] 
 function obj_assign_with(obj,m,f){
   if(null != m){
     let input = m || {};
@@ -923,7 +927,7 @@ function obj_assign_with(obj,m,f){
   return obj;
 }
 
-// xt.lang.base-lib/obj-from-pairs [979] 
+// xt.lang.base-lib/obj-from-pairs [981] 
 function obj_from_pairs(pairs){
   let out = {};
   for(let pair of pairs){
@@ -932,7 +936,7 @@ function obj_from_pairs(pairs){
   return out;
 }
 
-// xt.lang.base-lib/obj-del [990] 
+// xt.lang.base-lib/obj-del [992] 
 function obj_del(obj,ks){
   for(let k of ks){
     delete obj[k];
@@ -940,7 +944,7 @@ function obj_del(obj,ks){
   return obj;
 }
 
-// xt.lang.base-lib/obj-del-all [998] 
+// xt.lang.base-lib/obj-del-all [1000] 
 function obj_del_all(obj){
   for(let k of obj_keys(obj)){
     delete obj[k];
@@ -948,7 +952,7 @@ function obj_del_all(obj){
   return obj;
 }
 
-// xt.lang.base-lib/obj-pick [1007] 
+// xt.lang.base-lib/obj-pick [1009] 
 function obj_pick(obj,ks){
   let out = {};
   if(null == obj){
@@ -963,7 +967,7 @@ function obj_pick(obj,ks){
   return out;
 }
 
-// xt.lang.base-lib/obj-omit [1020] 
+// xt.lang.base-lib/obj-omit [1022] 
 function obj_omit(obj,ks){
   let out = {};
   let lu = {};
@@ -978,7 +982,7 @@ function obj_omit(obj,ks){
   return out;
 }
 
-// xt.lang.base-lib/obj-transpose [1033] 
+// xt.lang.base-lib/obj-transpose [1035] 
 function obj_transpose(obj){
   let out = {};
   if(null != obj){
@@ -989,7 +993,7 @@ function obj_transpose(obj){
   return out;
 }
 
-// xt.lang.base-lib/obj-nest [1043] 
+// xt.lang.base-lib/obj-nest [1045] 
 function obj_nest(arr,v){
   let idx = arr.length;
   let out = v;
@@ -1005,7 +1009,7 @@ function obj_nest(arr,v){
   }
 }
 
-// xt.lang.base-lib/obj-map [1058] 
+// xt.lang.base-lib/obj-map [1060] 
 function obj_map(obj,f){
   let out = {};
   if(null != obj){
@@ -1016,7 +1020,7 @@ function obj_map(obj,f){
   return out;
 }
 
-// xt.lang.base-lib/obj-filter [1068] 
+// xt.lang.base-lib/obj-filter [1070] 
 function obj_filter(obj,pred){
   let out = {};
   if(null != obj){
@@ -1029,7 +1033,7 @@ function obj_filter(obj,pred){
   return out;
 }
 
-// xt.lang.base-lib/obj-keep [1079] 
+// xt.lang.base-lib/obj-keep [1081] 
 function obj_keep(obj,f){
   let out = {};
   if(null != obj){
@@ -1043,7 +1047,7 @@ function obj_keep(obj,f){
   return out;
 }
 
-// xt.lang.base-lib/obj-keepf [1091] 
+// xt.lang.base-lib/obj-keepf [1093] 
 function obj_keepf(obj,pred,f){
   let out = {};
   if(null != obj){
@@ -1056,7 +1060,7 @@ function obj_keepf(obj,pred,f){
   return out;
 }
 
-// xt.lang.base-lib/obj-intersection [1102] 
+// xt.lang.base-lib/obj-intersection [1104] 
 function obj_intersection(obj,other){
   let out = [];
   for(let k of Object.keys(other)){
@@ -1067,7 +1071,7 @@ function obj_intersection(obj,other){
   return out;
 }
 
-// xt.lang.base-lib/obj-difference [1112] 
+// xt.lang.base-lib/obj-difference [1114] 
 function obj_difference(obj,other){
   let out = [];
   for(let k of Object.keys(other)){
@@ -1078,7 +1082,7 @@ function obj_difference(obj,other){
   return out;
 }
 
-// xt.lang.base-lib/obj-keys-nested [1122] 
+// xt.lang.base-lib/obj-keys-nested [1124] 
 function obj_keys_nested(m,path){
   let out = [];
   for(let [k,v] of Object.entries(m)){
@@ -1096,7 +1100,7 @@ function obj_keys_nested(m,path){
   return out;
 }
 
-// xt.lang.base-lib/to-flat [1143] 
+// xt.lang.base-lib/to-flat [1145] 
 function to_flat(obj){
   let out = [];
   if(objp(obj)){
@@ -1114,7 +1118,7 @@ function to_flat(obj){
   return out;
 }
 
-// xt.lang.base-lib/from-flat [1159] 
+// xt.lang.base-lib/from-flat [1161] 
 function from_flat(arr,f,init){
   let out = init;
   let k = null;
@@ -1130,7 +1134,7 @@ function from_flat(arr,f,init){
   return out;
 }
 
-// xt.lang.base-lib/get-in [1171] 
+// xt.lang.base-lib/get-in [1173] 
 function get_in(obj,arr){
   if(null == obj){
     return null;
@@ -1159,7 +1163,7 @@ function get_in(obj,arr){
   }
 }
 
-// xt.lang.base-lib/set-in [1196] 
+// xt.lang.base-lib/set-in [1198] 
 function set_in(obj,arr,v){
   if(0 == (arr || []).length){
     return obj;
@@ -1182,7 +1186,7 @@ function set_in(obj,arr,v){
   }
 }
 
-// xt.lang.base-lib/memoize-key [1216] 
+// xt.lang.base-lib/memoize-key [1218] 
 function memoize_key(f){
   let cache = {};
   let cache_fn = function (key){
@@ -1195,7 +1199,7 @@ function memoize_key(f){
   };
 }
 
-// xt.lang.base-lib/not-empty? [1229] 
+// xt.lang.base-lib/not-empty? [1231] 
 function not_emptyp(res){
   if(null == res){
     return false;
@@ -1217,7 +1221,7 @@ function not_emptyp(res){
   }
 }
 
-// xt.lang.base-lib/eq-nested-loop [1251] 
+// xt.lang.base-lib/eq-nested-loop [1253] 
 function eq_nested_loop(src,dst,eq_obj,eq_arr,cache){
   if(objp(src) && objp(dst)){
     if(cache && cache.get(src) && cache.get(dst)){
@@ -1240,7 +1244,7 @@ function eq_nested_loop(src,dst,eq_obj,eq_arr,cache){
   }
 }
 
-// xt.lang.base-lib/eq-nested-obj [1272] 
+// xt.lang.base-lib/eq-nested-obj [1274] 
 function eq_nested_obj(src,dst,eq_obj,eq_arr,cache){
   cache.set(src,src);
   cache.set(dst,dst);
@@ -1257,7 +1261,7 @@ function eq_nested_obj(src,dst,eq_obj,eq_arr,cache){
   return true;
 }
 
-// xt.lang.base-lib/eq-nested-arr [1291] 
+// xt.lang.base-lib/eq-nested-arr [1293] 
 function eq_nested_arr(src_arr,dst_arr,eq_obj,eq_arr,cache){
   cache.set(src_arr,src_arr);
   cache.set(dst_arr,dst_arr);
@@ -1273,12 +1277,12 @@ function eq_nested_arr(src_arr,dst_arr,eq_obj,eq_arr,cache){
   return true;
 }
 
-// xt.lang.base-lib/eq-nested [1308] 
+// xt.lang.base-lib/eq-nested [1310] 
 function eq_nested(obj,m){
   return eq_nested_loop(obj,m,eq_nested_obj,eq_nested_arr,null);
 }
 
-// xt.lang.base-lib/obj-diff [1318] 
+// xt.lang.base-lib/obj-diff [1320] 
 function obj_diff(obj,m){
   if(null == m){
     return {};
@@ -1295,7 +1299,7 @@ function obj_diff(obj,m){
   return out;
 }
 
-// xt.lang.base-lib/obj-diff-nested [1331] 
+// xt.lang.base-lib/obj-diff-nested [1333] 
 function obj_diff_nested(obj,m){
   if(null == m){
     return {};
@@ -1321,14 +1325,14 @@ function obj_diff_nested(obj,m){
   return out;
 }
 
-// xt.lang.base-lib/sort [1350] 
+// xt.lang.base-lib/sort [1352] 
 function sort(arr){
   return arr_sort(arr,identity,function (a,b){
     return a < b;
   });
 }
 
-// xt.lang.base-lib/objify [1356] 
+// xt.lang.base-lib/objify [1358] 
 function objify(v){
   if("string" == (typeof v)){
     return JSON.parse(v);
@@ -1338,7 +1342,7 @@ function objify(v){
   }
 }
 
-// xt.lang.base-lib/template-entry [1365] 
+// xt.lang.base-lib/template-entry [1367] 
 function template_entry(obj,template,props){
   if(fnp(template)){
     return template(obj,props);
@@ -1354,14 +1358,14 @@ function template_entry(obj,template,props){
   }
 }
 
-// xt.lang.base-lib/template-fn [1381] 
+// xt.lang.base-lib/template-fn [1383] 
 function template_fn(template){
   return function (obj,props){
     return template_entry(obj,template,props);
   };
 }
 
-// xt.lang.base-lib/template-multi [1387] 
+// xt.lang.base-lib/template-multi [1389] 
 function template_multi(arr){
   let template_fn = function (entry,props){
     for(let template of arr){
@@ -1374,7 +1378,7 @@ function template_multi(arr){
   return template_fn;
 }
 
-// xt.lang.base-lib/sort-by [1399] 
+// xt.lang.base-lib/sort-by [1401] 
 function sort_by(arr,inputs){
   let keys = arr_map(inputs,function (e){
     return arrp(e) ? e[0] : e;
@@ -1424,7 +1428,7 @@ function sort_by(arr,inputs){
   return arr_sort(arr,key_fn,comp_fn);
 }
 
-// xt.lang.base-lib/sort-edges-build [1438] 
+// xt.lang.base-lib/sort-edges-build [1440] 
 function sort_edges_build(nodes,edge){
   let n_from = edge[0];
   let n_to = edge[1];
@@ -1438,7 +1442,7 @@ function sort_edges_build(nodes,edge){
   links.push(n_to);
 }
 
-// xt.lang.base-lib/sort-edges-visit [1453] 
+// xt.lang.base-lib/sort-edges-visit [1455] 
 function sort_edges_visit(nodes,visited,sorted,id,ancestors){
   if(visited[id]){
     return;
@@ -1457,7 +1461,7 @@ function sort_edges_visit(nodes,visited,sorted,id,ancestors){
   sorted.unshift(id);
 }
 
-// xt.lang.base-lib/sort-edges [1470] 
+// xt.lang.base-lib/sort-edges [1472] 
 function sort_edges(edges){
   let nodes = {};
   let sorted = [];
@@ -1471,7 +1475,7 @@ function sort_edges(edges){
   return sorted;
 }
 
-// xt.lang.base-lib/sort-topo [1483] 
+// xt.lang.base-lib/sort-topo [1485] 
 function sort_topo(input){
   let edges = [];
   for(let link of input){
@@ -1484,7 +1488,7 @@ function sort_topo(input){
   return sort_edges(edges).slice().reverse();
 }
 
-// xt.lang.base-lib/clone-shallow [1496] 
+// xt.lang.base-lib/clone-shallow [1498] 
 function clone_shallow(obj){
   if(null == obj){
     return obj;
@@ -1500,7 +1504,7 @@ function clone_shallow(obj){
   }
 }
 
-// xt.lang.base-lib/clone-nested-loop [1505] 
+// xt.lang.base-lib/clone-nested-loop [1507] 
 function clone_nested_loop(obj,cache){
   if(null == obj){
     return obj;
@@ -1530,7 +1534,7 @@ function clone_nested_loop(obj,cache){
   }
 }
 
-// xt.lang.base-lib/clone-nested [1532] 
+// xt.lang.base-lib/clone-nested [1534] 
 function clone_nested(obj){
   if(!(objp(obj) || arrp(obj))){
     return obj;
@@ -1540,7 +1544,7 @@ function clone_nested(obj){
   }
 }
 
-// xt.lang.base-lib/wrap-callback [1543] 
+// xt.lang.base-lib/wrap-callback [1545] 
 function wrap_callback(callbacks,key){
   callbacks = (callbacks || {});
   let result_fn = function (result){
@@ -1555,7 +1559,7 @@ function wrap_callback(callbacks,key){
   return result_fn;
 }
 
-// xt.lang.base-lib/walk [1556] 
+// xt.lang.base-lib/walk [1558] 
 function walk(obj,pre_fn,post_fn){
   obj = pre_fn(obj);
   if(null == obj){
@@ -1580,7 +1584,7 @@ function walk(obj,pre_fn,post_fn){
   }
 }
 
-// xt.lang.base-lib/get-data [1579] 
+// xt.lang.base-lib/get-data [1581] 
 function get_data(obj){
   let data_fn = function (obj){
     if(("string" == (typeof obj)) || ("number" == (typeof obj)) || ("boolean" == (typeof obj)) || ((null != obj) && ("object" == (typeof obj)) && !Array.isArray(obj)) || Array.isArray(obj) || (null == obj)){
@@ -1593,7 +1597,7 @@ function get_data(obj){
   return walk(obj,identity,data_fn);
 }
 
-// xt.lang.base-lib/get-spec [1595] 
+// xt.lang.base-lib/get-spec [1597] 
 function get_spec(obj){
   let spec_fn = function (obj){
     if(!(objp(obj) || arrp(obj))){
@@ -1606,7 +1610,7 @@ function get_spec(obj){
   return walk(obj,identity,spec_fn);
 }
 
-// xt.lang.base-lib/split-long [1611] 
+// xt.lang.base-lib/split-long [1613] 
 function split_long(s,lineLen){
   if(is_emptyp(s)){
     return "";
@@ -1624,7 +1628,7 @@ function split_long(s,lineLen){
   return out;
 }
 
-// xt.lang.base-lib/proto-spec [1629] 
+// xt.lang.base-lib/proto-spec [1631] 
 function proto_spec(spec_arr){
   let acc_fn = function (acc,e){
     let [spec_i,spec_map] = e;
@@ -1638,7 +1642,7 @@ function proto_spec(spec_arr){
   return arr_foldl(spec_arr,acc_fn,{});
 }
 
-// xt.lang.base-lib/with-delay [1651] 
+// xt.lang.base-lib/with-delay [1653] 
 function with_delay(thunk,ms){
   setTimeout(function (){
     new Promise(function (resolve,reject){
@@ -1647,7 +1651,7 @@ function with_delay(thunk,ms){
   },ms);
 }
 
-// xt.lang.base-lib/trace-log [1694] 
+// xt.lang.base-lib/trace-log [1696] 
 function trace_log(){
   if(!(null == globalThis["TRACE"])){
     return globalThis["TRACE"];
@@ -1658,13 +1662,13 @@ function trace_log(){
   }
 }
 
-// xt.lang.base-lib/trace-log-clear [1703] 
+// xt.lang.base-lib/trace-log-clear [1705] 
 function trace_log_clear(){
   globalThis["TRACE"] = [];
   return globalThis["TRACE"];
 }
 
-// xt.lang.base-lib/trace-log-add [1710] 
+// xt.lang.base-lib/trace-log-add [1712] 
 function trace_log_add(data,tag,opts){
   let log = trace_log();
   let m = obj_assign({"tag":tag,"data":data,"time":Date.now()},opts);
@@ -1672,14 +1676,14 @@ function trace_log_add(data,tag,opts){
   return log.length;
 }
 
-// xt.lang.base-lib/trace-filter [1723] 
+// xt.lang.base-lib/trace-filter [1725] 
 function trace_filter(tag){
   return arr_filter(trace_log(),function (e){
     return tag == e["tag"];
   });
 }
 
-// xt.lang.base-lib/trace-last-entry [1729] 
+// xt.lang.base-lib/trace-last-entry [1731] 
 function trace_last_entry(tag){
   let log = trace_log();
   if(null == tag){
@@ -1691,19 +1695,19 @@ function trace_last_entry(tag){
   }
 }
 
-// xt.lang.base-lib/trace-data [1739] 
+// xt.lang.base-lib/trace-data [1741] 
 function trace_data(tag){
   return arr_map(trace_log(),function (e){
     return e["data"];
   });
 }
 
-// xt.lang.base-lib/trace-last [1745] 
+// xt.lang.base-lib/trace-last [1747] 
 function trace_last(tag){
   return (trace_last_entry(tag))["data"];
 }
 
-// xt.lang.base-lib/trace-run [1761] 
+// xt.lang.base-lib/trace-run [1763] 
 function trace_run(f){
   trace_log_clear();
   f();

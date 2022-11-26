@@ -71,7 +71,7 @@ function ModalElementAbsolute({children,chord,dimensions,effect,indicators,margi
   let {contentRef,getLayout} = useMeasureContent(children,visible,dimensions,setLayout);
   return (
     <physical_base.Box
-      style={Object.assign({"position":"absolute"},absStyle)}
+      style={Object.assign({"position":"absolute","opacity":0},absStyle)}
       onLayout={getLayout}
       transformations={{
         "visible":function (visible){
@@ -91,10 +91,17 @@ function ModalElementAbsolute({children,chord,dimensions,effect,indicators,margi
     </physical_base.Box>);
 }
 
-// js.react-native.ui-modal/ModalElementHost [124] 
+// js.react-native.ui-modal/ModalElementHost [125] 
 function ModalElementHost({children,chord,dimensions,effect,hostRef,indicators,margin,position,transition,visible}){
   let [layout,setLayout] = React.useState({"height":0,"width":0,"px":0,"py":0});
   let [hostLayout,setHostLayout] = React.useState({"height":0,"width":0,"px":0,"py":0});
+  console.log(
+    " js.react-native.ui-modal/ModalElementHost",
+    146,
+    "\n\n",
+    layout,
+    hostLayout
+  );
   let layoutRef = r.useFollowRef(layout);
   let hostLayoutRef = r.useFollowRef(hostLayout);
   let contentRef = useMeasureContent(children,visible,dimensions,setLayout);
@@ -128,7 +135,7 @@ function ModalElementHost({children,chord,dimensions,effect,hostRef,indicators,m
     </physical_base.Box>);
 }
 
-// js.react-native.ui-modal/Modal [184] 
+// js.react-native.ui-modal/Modal [186] 
 function Modal({
   visible,
   position = "centered",

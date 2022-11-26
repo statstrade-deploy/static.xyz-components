@@ -37,8 +37,9 @@ function absoluteAnimateFn({transition,effect,position,margin,height = 0,width =
 function absoluteAnimateProgress({transition,effect = {},position,margin,height,width},visible){
   transition = (transition || DefaultTransitions[position]);
   let [translateKey,magnitude] = model_context.getTranslationOffset({height,margin,position,transition,width});
+  let opacity = k.mix(effect.fade || 0,1,visible);
   let style = {
-    "opacity":k.mix(effect.fade || 0,1,visible),
+    "opacity":opacity * opacity,
     "transform":[
         ...(translateKey ? [{[translateKey]:(1 - visible) * magnitude}] : []),
         ...(effect.zoom ? [{"scale":k.mix(effect.zoom,1,visible)}] : [])
@@ -47,7 +48,7 @@ function absoluteAnimateProgress({transition,effect = {},position,margin,height,
   return {"style":style};
 }
 
-// js.react-native.helper-transition/relativeAnimateProgress [88] 
+// js.react-native.helper-transition/relativeAnimateProgress [89] 
 function relativeAnimateProgress({transition,effect = {},xOffset,yOffset},visible){
   let style = {
     "opacity":k.mix(effect.fade || 0,1,visible),
