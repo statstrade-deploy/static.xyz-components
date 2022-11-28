@@ -272,7 +272,7 @@ function TextBaseDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.ui-text-test/AvatarDemo [298] 
+// melbourne.ui-text-test/AvatarDemo [301] 
 function AvatarDemo(){
   return (
     <n.Enclosed label="melbourne.ui-text/Avatar">
@@ -289,7 +289,7 @@ function AvatarDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.ui-text-test/MinorBaseDemo [336] 
+// melbourne.ui-text-test/MinorBaseDemo [339] 
 function MinorBaseDemo(){
   let [color,setColor] = React.useState("purple");
   let [type,setType] = React.useState("dark");
@@ -361,7 +361,7 @@ function MinorBaseDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.ui-text-test/AccentBaseDemo [418] 
+// melbourne.ui-text-test/AccentBaseDemo [421] 
 function AccentBaseDemo(){
   let [color,setColor] = React.useState("purple");
   let [type,setType] = React.useState("dark");
@@ -433,7 +433,7 @@ function AccentBaseDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.ui-text-test/ButtonTooltipDemo [497] 
+// melbourne.ui-text-test/ButtonTooltipDemo [500] 
 function ButtonTooltipDemo(){
   let mainComponent = React.useCallback(function (){
     return (
@@ -493,7 +493,7 @@ function ButtonTooltipDemo(){
     </n.Isolation>);
 }
 
-// melbourne.ui-text-test/ConfirmTooltipDemo [545] 
+// melbourne.ui-text-test/ConfirmTooltipDemo [548] 
 function ConfirmTooltipDemo(){
   return (
     <n.Isolation>
@@ -542,7 +542,7 @@ function ConfirmTooltipDemo(){
     </n.Isolation>);
 }
 
-// melbourne.ui-text-test/TextAltDemo [584] 
+// melbourne.ui-text-test/TextAltDemo [587] 
 function TextAltDemo(){
   return (
     <n.Enclosed label="melbourne.ui-text/TextAlt">

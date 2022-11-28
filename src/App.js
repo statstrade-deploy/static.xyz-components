@@ -16,7 +16,7 @@ import base_box from './xt/lang/event-box'
 
 import ext_box from './js/react/ext-box'
 
-// statsenv.main.xyz-components/__import__ [30] 
+// statsenv.main.xyz-components/__import__ [31] 
 import RNIcon from 'react-native-vector-icons/Entypo'
 import * as ExpoImagePicker from 'expo-image-picker'
 Object.defineProperty((globalThis),"React",{"value":React,"writeable":true});
@@ -33,19 +33,19 @@ Object.defineProperty(
 );
 Object.defineProperty((globalThis),"Expo",{"value":Expo,"writeable":true});
 
-// statsenv.main.xyz-components/Global [34] 
+// statsenv.main.xyz-components/Global [35] 
 globalThis["statsenv_main_xyz_components$$Global"] = base_box.make_box({"init":false,"l0":"03-pune-frame","l1":"101-sidemenu"});
 
-// statsenv.main.xyz-components/Screens [39] 
+// statsenv.main.xyz-components/Screens [40] 
 globalThis["statsenv_main_xyz_components$$Screens"] = base_box.make_box({});
 
-// statsenv.main.xyz-components/__screen__ [42] 
+// statsenv.main.xyz-components/__screen__ [43] 
 base_box.set_data(globalThis["statsenv_main_xyz_components$$Screens"],[],{
   "01-melbourne":web_melbourne.melbourne_controls(),
   "02-slim":web_melbourne.slim_controls()
 });
 
-// statsenv.main.xyz-components/AppMain [51] 
+// statsenv.main.xyz-components/AppMain [52] 
 function AppMain(){
   let [l0,setL0] = ext_box.useBox(globalThis["statsenv_main_xyz_components$$Global"],["l0"]);
   let [l1,setL1] = ext_box.useBox(globalThis["statsenv_main_xyz_components$$Global"],["l1"]);
@@ -69,20 +69,20 @@ function AppMain(){
     </ReactNative.View>);
 }
 
-// statsenv.main.xyz-components/AppScratch [70] 
+// statsenv.main.xyz-components/AppScratch [71] 
 function AppScratch(){
   return (
     <ReactNative.View></ReactNative.View>);
 }
 
-// statsenv.main.xyz-components/__main__ [74] 
+// statsenv.main.xyz-components/__main__ [75] 
 base_box.set_data(
   globalThis["statsenv_main_xyz_components$$Global"],
   ["Main"],
   AppMain
 );
 
-// statsenv.main.xyz-components/App [78] 
+// statsenv.main.xyz-components/App [79] 
 function App(){
   let {Main} = ext_box.listenBox(globalThis["statsenv_main_xyz_components$$Global"],[]);
   return (

@@ -493,7 +493,7 @@ function EntryContentSeparatorDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentTitleH3Demo [552] 
+// melbourne.slim-entry-test/EntryContentTitleH3Demo [558] 
 function EntryContentTitleH3Demo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
@@ -519,7 +519,7 @@ function EntryContentTitleH3Demo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentTitleH4Demo [585] 
+// melbourne.slim-entry-test/EntryContentTitleH4Demo [591] 
 function EntryContentTitleH4Demo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
@@ -545,7 +545,7 @@ function EntryContentTitleH4Demo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentTitleH5Demo [618] 
+// melbourne.slim-entry-test/EntryContentTitleH5Demo [624] 
 function EntryContentTitleH5Demo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
@@ -571,7 +571,7 @@ function EntryContentTitleH5Demo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentTitleDemo [651] 
+// melbourne.slim-entry-test/EntryContentTitleDemo [657] 
 function EntryContentTitleDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
@@ -597,7 +597,7 @@ function EntryContentTitleDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentParagraphDemo [684] 
+// melbourne.slim-entry-test/EntryContentParagraphDemo [693] 
 function EntryContentParagraphDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
@@ -623,7 +623,7 @@ function EntryContentParagraphDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentIconDemo [717] 
+// melbourne.slim-entry-test/EntryContentIconDemo [726] 
 function EntryContentIconDemo(){
   let entry = {"name":"home"};
   return (
@@ -649,7 +649,7 @@ function EntryContentIconDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentImageDemo [748] 
+// melbourne.slim-entry-test/EntryContentImageDemo [757] 
 function EntryContentImageDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
@@ -684,7 +684,7 @@ function EntryContentImageDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentPairDemo [779] 
+// melbourne.slim-entry-test/EntryContentPairDemo [788] 
 function EntryContentPairDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
@@ -723,7 +723,7 @@ function EntryContentPairDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentFieldDemo [814] 
+// melbourne.slim-entry-test/EntryContentFieldDemo [823] 
 function EntryContentFieldDemo(){
   let form = ext_form.makeForm(function (){
     return {
@@ -780,7 +780,7 @@ function EntryContentFieldDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryLayoutFormFadeDemo [869] 
+// melbourne.slim-entry-test/EntryLayoutFormFadeDemo [878] 
 function EntryLayoutFormFadeDemo(){
   let form = ext_form.makeForm(function (){
     return {"visible":true};
@@ -813,7 +813,7 @@ function EntryLayoutFormFadeDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryLayoutFormFoldDemo [903] 
+// melbourne.slim-entry-test/EntryLayoutFormFoldDemo [912] 
 function EntryLayoutFormFoldDemo(){
   let form = ext_form.makeForm(function (){
     return {"visible":true};
@@ -846,7 +846,7 @@ function EntryLayoutFormFoldDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentControlDemo [949] 
+// melbourne.slim-entry-test/EntryContentControlDemo [958] 
 function EntryContentControlDemo(){
   let entry = {
     "id":"hello",
@@ -887,7 +887,7 @@ function EntryContentControlDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryLayoutControlDemo [985] 
+// melbourne.slim-entry-test/EntryLayoutControlDemo [994] 
 function EntryLayoutControlDemo(){
   let entry = {
     "id":"hello",
@@ -940,7 +940,7 @@ function EntryLayoutControlDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentLinkDemo [1023] 
+// melbourne.slim-entry-test/EntryContentLinkDemo [1032] 
 function EntryContentLinkDemo(){
   let route = ext_route.makeRoute("hello/world");
   let url = ext_route.listenRouteUrl(route);
@@ -969,7 +969,7 @@ function EntryContentLinkDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryLayoutLinkDemo [1057] 
+// melbourne.slim-entry-test/EntryLayoutLinkDemo [1066] 
 function EntryLayoutLinkDemo(){
   let route = ext_route.makeRoute("hello/world");
   let url = ext_route.listenRouteUrl(route);
@@ -1008,7 +1008,7 @@ function EntryLayoutLinkDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentRouteDemo [1091] 
+// melbourne.slim-entry-test/EntryContentRouteDemo [1100] 
 function EntryContentRouteDemo(){
   let entry = {
     "id":"hello",
@@ -1025,7 +1025,7 @@ function EntryContentRouteDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentActionDemo [1127] 
+// melbourne.slim-entry-test/EntryContentActionDemo [1139] 
 function EntryContentActionDemo(){
   let entry = {
     "id":"hello",
@@ -1069,7 +1069,7 @@ function EntryContentActionDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentSubmitDemo [1163] 
+// melbourne.slim-entry-test/EntryContentSubmitDemo [1175] 
 function EntryContentSubmitDemo(){
   let form = ext_form.makeForm(function (){
     return {
@@ -1113,7 +1113,7 @@ function EntryContentSubmitDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryLayoutCardDemo [1198] 
+// melbourne.slim-entry-test/EntryLayoutCardDemo [1210] 
 function EntryLayoutCardDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
@@ -1153,7 +1153,7 @@ function EntryLayoutCardDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryLayoutFormDemo [1238] 
+// melbourne.slim-entry-test/EntryLayoutFormDemo [1250] 
 function EntryLayoutFormDemo(){
   let form = ext_form.makeForm(function (){
     return {
@@ -1224,7 +1224,7 @@ function EntryLayoutFormDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryDemo [1301] 
+// melbourne.slim-entry-test/EntryDemo [1313] 
 function EntryDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
