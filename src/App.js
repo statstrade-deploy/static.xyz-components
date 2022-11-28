@@ -4,6 +4,8 @@ import React from 'react'
 
 import * as ReactNative from 'react-native'
 
+import web_pune_frame from './component/web-pune-frame'
+
 import web_melbourne from './component/web-melbourne'
 
 import n from './js/react-native'
@@ -21,6 +23,8 @@ import web_native from './component/web-native'
 // statsenv.main.xyz-components/__import__ [31] 
 import RNIcon from 'react-native-vector-icons/Entypo'
 import * as ExpoImagePicker from 'expo-image-picker'
+import * as RNSvg from 'react-native-svg'
+import * as LWCharts from 'lightweight-charts'
 Object.defineProperty((globalThis),"React",{"value":React,"writeable":true});
 Object.defineProperty(
   (globalThis),
@@ -33,6 +37,8 @@ Object.defineProperty(
   "ExpoImagePicker",
   {"value":ExpoImagePicker,"writeable":true}
 );
+Object.defineProperty((globalThis),"RNSvg",{"value":RNSvg,"writeable":true});
+Object.defineProperty((globalThis),"LWCharts",{"value":LWCharts,"writeable":true});
 Object.defineProperty((globalThis),"Expo",{"value":Expo,"writeable":true});
 
 // statsenv.main.xyz-components/Global [35] 
@@ -45,7 +51,8 @@ globalThis["statsenv_main_xyz_components$$Screens"] = base_box.make_box({});
 base_box.set_data(globalThis["statsenv_main_xyz_components$$Screens"],[],{
   "00-native":web_native.raw_controls(),
   "01-melbourne":web_melbourne.melbourne_controls(),
-  "02-slim":web_melbourne.slim_controls()
+  "02-slim":web_melbourne.slim_controls(),
+  "03-pune-frame":web_pune_frame.pune_frame_controls()
 });
 
 // statsenv.main.xyz-components/AppMain [53] 
