@@ -11,8 +11,8 @@ jobs:
     - name: Deploy gh-pages
       run: |-
         make build-web
-        git config user.name github-actions
-        git config user.email github-actions@github.com
+        git config --global user.name github-actions
+        git config --global user.email github-actions@github.com
         cd web-build && git init && git add -A && git commit -m 'deploying to gh-pages'
         git remote add origin git@github.com:statstrade-deploy/static.xyz-components.git
         git push origin HEAD:gh-pages --force
