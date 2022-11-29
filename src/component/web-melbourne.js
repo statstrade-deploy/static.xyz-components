@@ -378,6 +378,12 @@ function SlimEntryExamples(){
       <slim_entry_test.EntryLayoutDebugDemo></slim_entry_test.EntryLayoutDebugDemo>
       <slim_entry_test.EntryLayoutFormFadeDemo></slim_entry_test.EntryLayoutFormFadeDemo>
       <slim_entry_test.EntryLayoutFormFoldDemo></slim_entry_test.EntryLayoutFormFoldDemo>
+      <slim_entry_test.EntryContentTitleH1Demo></slim_entry_test.EntryContentTitleH1Demo>
+      <slim_entry_test.EntryContentTitleH2Demo></slim_entry_test.EntryContentTitleH2Demo>
+      <slim_entry_test.EntryContentTitleH3Demo></slim_entry_test.EntryContentTitleH3Demo>
+      <slim_entry_test.EntryContentTitleH4Demo></slim_entry_test.EntryContentTitleH4Demo>
+      <slim_entry_test.EntryContentTitleH5Demo></slim_entry_test.EntryContentTitleH5Demo>
+      <slim_entry_test.EntryContentBoldDemo></slim_entry_test.EntryContentBoldDemo>
       <slim_entry_test.EntryContentRawDemo></slim_entry_test.EntryContentRawDemo>
       <slim_entry_test.EntryContentRawFormDemo></slim_entry_test.EntryContentRawFormDemo>
       <slim_entry_test.EntryContentFillDemo></slim_entry_test.EntryContentFillDemo>
@@ -394,6 +400,7 @@ function SlimEntryExamples(){
       <slim_entry_test.EntryContentLinkDemo></slim_entry_test.EntryContentLinkDemo>
       <slim_entry_test.EntryLayoutLinkDemo></slim_entry_test.EntryLayoutLinkDemo>
       <slim_entry_test.EntryContentRouteDemo></slim_entry_test.EntryContentRouteDemo>
+      <slim_entry_test.EntryContentRouteToggleDemo></slim_entry_test.EntryContentRouteToggleDemo>
       <slim_entry_test.EntryContentSubmitDemo></slim_entry_test.EntryContentSubmitDemo>
       <slim_entry_test.EntryLayoutCardDemo></slim_entry_test.EntryLayoutCardDemo>
       <slim_entry_test.EntryLayoutFormDemo></slim_entry_test.EntryLayoutFormDemo>
@@ -401,7 +408,7 @@ function SlimEntryExamples(){
     </>);
 }
 
-// component.web-melbourne/SlimEntryPopupExamples [341] 
+// component.web-melbourne/SlimEntryPopupExamples [348] 
 function SlimEntryPopupExamples(){
   return (
     <>
@@ -409,7 +416,7 @@ function SlimEntryPopupExamples(){
     </>);
 }
 
-// component.web-melbourne/SlimSheetExamples [347] 
+// component.web-melbourne/SlimSheetExamples [354] 
 function SlimSheetExamples(){
   return (
     <>
@@ -424,7 +431,7 @@ function SlimSheetExamples(){
     </>);
 }
 
-// component.web-melbourne/SlimTableMiscExamples [360] 
+// component.web-melbourne/SlimTableMiscExamples [367] 
 function SlimTableMiscExamples(){
   return (
     <>
@@ -439,7 +446,7 @@ function SlimTableMiscExamples(){
     </>);
 }
 
-// component.web-melbourne/SlimTablePageExamples [373] 
+// component.web-melbourne/SlimTablePageExamples [380] 
 function SlimTablePageExamples(){
   return (
     <>
@@ -450,13 +457,13 @@ function SlimTablePageExamples(){
     </>);
 }
 
-// component.web-melbourne/SlimTableSearchExamples [382] 
+// component.web-melbourne/SlimTableSearchExamples [389] 
 function SlimTableSearchExamples(){
   return (
     <slim_table_search_test.TableListSearchDemo></slim_table_search_test.TableListSearchDemo>);
 }
 
-// component.web-melbourne/SlimTableGroupExamples [387] 
+// component.web-melbourne/SlimTableGroupExamples [394] 
 function SlimTableGroupExamples(){
   return (
     <>
@@ -466,7 +473,7 @@ function SlimTableGroupExamples(){
     </>);
 }
 
-// component.web-melbourne/SlimTableExamples [397] 
+// component.web-melbourne/SlimTableExamples [404] 
 function SlimTableExamples(){
   return (
     <>
@@ -479,7 +486,7 @@ function SlimTableExamples(){
     </>);
 }
 
-// component.web-melbourne/SlimTableExtraExamples [408] 
+// component.web-melbourne/SlimTableExtraExamples [415] 
 function SlimTableExtraExamples(){
   return (
     <>
@@ -488,7 +495,7 @@ function SlimTableExtraExamples(){
     </>);
 }
 
-// component.web-melbourne/SlimExamples [415] 
+// component.web-melbourne/SlimExamples [422] 
 function SlimExamples(){
   return (
     <>
@@ -499,13 +506,13 @@ function SlimExamples(){
     </>);
 }
 
-// component.web-melbourne/SlimDialogExamples [424] 
+// component.web-melbourne/SlimDialogExamples [431] 
 function SlimDialogExamples(){
   return (
     <><slim_dialog_test.DialogDemo></slim_dialog_test.DialogDemo></>);
 }
 
-// component.web-melbourne/SlimImageExamples [432] 
+// component.web-melbourne/SlimImageExamples [439] 
 function SlimImageExamples(){
   return (
     <>
@@ -513,7 +520,7 @@ function SlimImageExamples(){
     </>);
 }
 
-// component.web-melbourne/SlimLinkExamples [439] 
+// component.web-melbourne/SlimLinkExamples [446] 
 function SlimLinkExamples(){
   return (
     <>
@@ -523,7 +530,7 @@ function SlimLinkExamples(){
     </>);
 }
 
-// component.web-melbourne/SlimNumberExamples [448] 
+// component.web-melbourne/SlimNumberExamples [455] 
 function SlimNumberExamples(){
   return (
     <>
@@ -532,7 +539,7 @@ function SlimNumberExamples(){
     </>);
 }
 
-// component.web-melbourne/SlimSelectExamples [455] 
+// component.web-melbourne/SlimSelectExamples [462] 
 function SlimSelectExamples(){
   return (
     <>
@@ -541,7 +548,7 @@ function SlimSelectExamples(){
     </>);
 }
 
-// component.web-melbourne/SlimErrorExamples [462] 
+// component.web-melbourne/SlimErrorExamples [469] 
 function SlimErrorExamples(){
   return (
     <>
@@ -549,7 +556,7 @@ function SlimErrorExamples(){
     </>);
 }
 
-// component.web-melbourne/SlimSubmitExamples [468] 
+// component.web-melbourne/SlimSubmitExamples [475] 
 function SlimSubmitExamples(){
   return (
     <>
@@ -562,7 +569,7 @@ function SlimSubmitExamples(){
     </>);
 }
 
-// component.web-melbourne/melbourne-controls [483] 
+// component.web-melbourne/melbourne-controls [490] 
 function melbourne_controls(){
   return {
     "000-palette":PaletteExamples,
@@ -596,7 +603,7 @@ function melbourne_controls(){
   };
 }
 
-// component.web-melbourne/slim-controls [517] 
+// component.web-melbourne/slim-controls [524] 
 function slim_controls(){
   return {
     "201a-slim-common":SlimCommonExamples,

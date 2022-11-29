@@ -1,5 +1,7 @@
 import * as ReactNative from 'react-native'
 
+import ui_notify_alerts_test from '../pune/ui-notify-alerts-test'
+
 import ui_sidemenu_test from '../pune/ui-sidemenu-test'
 
 import ui_submenu_test from '../pune/ui-submenu-test'
@@ -34,7 +36,7 @@ import ui_console_test from '../pune/ui-console-test'
 
 import ui_market_live_test from '../pune/ui-market-live-test'
 
-// component.web-pune-frame/BreadcrumbExamples [34] 
+// component.web-pune-frame/BreadcrumbExamples [36] 
 function BreadcrumbExamples(){
   return (
     <>
@@ -42,13 +44,13 @@ function BreadcrumbExamples(){
     </>);
 }
 
-// component.web-pune-frame/ConsoleExamples [40] 
+// component.web-pune-frame/ConsoleExamples [42] 
 function ConsoleExamples(){
   return (
     <><ui_console_test.ConsoleDemo></ui_console_test.ConsoleDemo></>);
 }
 
-// component.web-pune-frame/DepthchartExamples [46] 
+// component.web-pune-frame/DepthchartExamples [48] 
 function DepthchartExamples(){
   return (
     <>
@@ -56,7 +58,7 @@ function DepthchartExamples(){
     </>);
 }
 
-// component.web-pune-frame/MainMenuExamples [53] 
+// component.web-pune-frame/MainMenuExamples [55] 
 function MainMenuExamples(){
   return (
     <>
@@ -69,7 +71,7 @@ function MainMenuExamples(){
     </>);
 }
 
-// component.web-pune-frame/SubMenuExamples [64] 
+// component.web-pune-frame/SubMenuExamples [66] 
 function SubMenuExamples(){
   return (
     <>
@@ -79,7 +81,13 @@ function SubMenuExamples(){
     </>);
 }
 
-// component.web-pune-frame/SideMenuExamples [72] 
+// component.web-pune-frame/SideBarExamples [74] 
+function SideBarExamples(){
+  return (
+    <></>);
+}
+
+// component.web-pune-frame/SideMenuExamples [80] 
 function SideMenuExamples(){
   return (
     <>
@@ -89,16 +97,15 @@ function SideMenuExamples(){
     </>);
 }
 
-// component.web-pune-frame/SideBarExamples [80] 
-function SideBarExamples(){
+// component.web-pune-frame/NotifyAlertsExamples [88] 
+function NotifyAlertsExamples(){
   return (
     <>
-      <ui_sidebar_test.SidebarMenuDemo></ui_sidebar_test.SidebarMenuDemo>
-      <ui_sidebar_test.SidebarDemo></ui_sidebar_test.SidebarDemo>
+      <ui_notify_alerts_test.NotifyAlertsDemo></ui_notify_alerts_test.NotifyAlertsDemo>
     </>);
 }
 
-// component.web-pune-frame/TopNotifyExamples [87] 
+// component.web-pune-frame/TopNotifyExamples [102] 
 function TopNotifyExamples(){
   return (
     <>
@@ -107,7 +114,7 @@ function TopNotifyExamples(){
     </>);
 }
 
-// component.web-pune-frame/PageExamples [94] 
+// component.web-pune-frame/PageExamples [110] 
 function PageExamples(){
   return (
     <>
@@ -117,7 +124,7 @@ function PageExamples(){
     </>);
 }
 
-// component.web-pune-frame/SparklineExamples [102] 
+// component.web-pune-frame/SparklineExamples [118] 
 function SparklineExamples(){
   return (
     <>
@@ -125,7 +132,7 @@ function SparklineExamples(){
     </>);
 }
 
-// component.web-pune-frame/DeltaExamples [108] 
+// component.web-pune-frame/DeltaExamples [124] 
 function DeltaExamples(){
   return (
     <>
@@ -133,7 +140,7 @@ function DeltaExamples(){
     </>);
 }
 
-// component.web-pune-frame/LadderExamples [114] 
+// component.web-pune-frame/LadderExamples [130] 
 function LadderExamples(){
   return (
     <>
@@ -143,7 +150,7 @@ function LadderExamples(){
     </>);
 }
 
-// component.web-pune-frame/LiveExamples [122] 
+// component.web-pune-frame/LiveExamples [138] 
 function LiveExamples(){
   return (
     <>
@@ -152,19 +159,19 @@ function LiveExamples(){
     </>);
 }
 
-// component.web-pune-frame/MetamaskContractExamples [129] 
+// component.web-pune-frame/MetamaskContractExamples [147] 
 function MetamaskContractExamples(){
   return (
     <></>);
 }
 
-// component.web-pune-frame/MetamaskUserExamples [135] 
+// component.web-pune-frame/MetamaskUserExamples [153] 
 function MetamaskUserExamples(){
   return (
     <></>);
 }
 
-// component.web-pune-frame/FrameDemo [141] 
+// component.web-pune-frame/FrameDemo [159] 
 function FrameDemo(){
   return (
     <ReactNative.View style={{"height":700,"maxWidth":650}}>
@@ -172,7 +179,7 @@ function FrameDemo(){
     </ReactNative.View>);
 }
 
-// component.web-pune-frame/ChartDemo [149] 
+// component.web-pune-frame/ChartDemo [167] 
 function ChartDemo(){
   return (
     <ReactNative.View style={{"height":700,"maxWidth":650}}>
@@ -180,13 +187,14 @@ function ChartDemo(){
     </ReactNative.View>);
 }
 
-// component.web-pune-frame/pune-frame-controls [157] 
+// component.web-pune-frame/pune-frame-controls [175] 
 function pune_frame_controls(){
   return {
     "101-sidemenu":SideMenuExamples,
     "102-mainmenu":MainMenuExamples,
     "103-submenu":SubMenuExamples,
     "104-topnotify":TopNotifyExamples,
+    "104a-notifyalert":NotifyAlertsExamples,
     "105-console":ConsoleExamples,
     "106-breadcrumb":BreadcrumbExamples,
     "108-sidebar":SideBarExamples,
@@ -209,8 +217,9 @@ var MODULE = {
   "DepthchartExamples":DepthchartExamples,
   "MainMenuExamples":MainMenuExamples,
   "SubMenuExamples":SubMenuExamples,
-  "SideMenuExamples":SideMenuExamples,
   "SideBarExamples":SideBarExamples,
+  "SideMenuExamples":SideMenuExamples,
+  "NotifyAlertsExamples":NotifyAlertsExamples,
   "TopNotifyExamples":TopNotifyExamples,
   "PageExamples":PageExamples,
   "SparklineExamples":SparklineExamples,

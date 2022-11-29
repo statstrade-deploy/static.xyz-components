@@ -96,6 +96,13 @@ function merge_data(box,path,value){
   return set_data(box,path,merged);
 }
 
+// xt.lang.event-box/append-data [126] 
+function append_data(box,path,value){
+  let arr = k.arr_clone(get_data(box,path));
+  arr.push(value);
+  return set_data(box,path,arr);
+}
+
 var MODULE = {
   "make_box":make_box,
   "check_event":check_event,
@@ -108,7 +115,8 @@ var MODULE = {
   "del_data_raw":del_data_raw,
   "del_data":del_data,
   "reset_data":reset_data,
-  "merge_data":merge_data
+  "merge_data":merge_data,
+  "append_data":append_data
 };
 
 export default MODULE

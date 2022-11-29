@@ -493,7 +493,59 @@ function EntryContentSeparatorDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentTitleH3Demo [558] 
+// melbourne.slim-entry-test/EntryContentTitleH1Demo [552] 
+function EntryContentTitleH1Demo(){
+  let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
+  return (
+    <n.Enclosed label="melbourne.slim-entry/EntryContentTitleH1">
+      <n.Row>
+        <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
+          <slim_entry.EntryContentTitleH1
+            design={{"type":"light"}}
+            entry={entry}
+            impl={{"key":"title_h1","template":["currency_id"]}}
+            custom={{"title":{"style":{"padding":10}}}}>
+          </slim_entry.EntryContentTitleH1>
+        </ui_static.Div>
+        <ui_static.Div design={{"type":"dark"}} style={{"flex":1}}>
+          <slim_entry.Entry
+            design={{"type":"dark"}}
+            entry={entry}
+            impl={{"type":"title_h1","key":"title","template":["currency_id"]}}
+            custom={{"title":{"style":{"padding":10}}}}>
+          </slim_entry.Entry>
+        </ui_static.Div>
+      </n.Row>
+    </n.Enclosed>);
+}
+
+// melbourne.slim-entry-test/EntryContentTitleH2Demo [585] 
+function EntryContentTitleH2Demo(){
+  let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
+  return (
+    <n.Enclosed label="melbourne.slim-entry/EntryContentTitleH2">
+      <n.Row>
+        <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
+          <slim_entry.EntryContentTitleH2
+            design={{"type":"light"}}
+            entry={entry}
+            impl={{"key":"title_h2","template":["currency_id"]}}
+            custom={{"title":{"style":{"padding":10}}}}>
+          </slim_entry.EntryContentTitleH2>
+        </ui_static.Div>
+        <ui_static.Div design={{"type":"dark"}} style={{"flex":1}}>
+          <slim_entry.Entry
+            design={{"type":"dark"}}
+            entry={entry}
+            impl={{"type":"title_h2","key":"title","template":["currency_id"]}}
+            custom={{"title":{"style":{"padding":10}}}}>
+          </slim_entry.Entry>
+        </ui_static.Div>
+      </n.Row>
+    </n.Enclosed>);
+}
+
+// melbourne.slim-entry-test/EntryContentTitleH3Demo [618] 
 function EntryContentTitleH3Demo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
@@ -519,7 +571,7 @@ function EntryContentTitleH3Demo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentTitleH4Demo [591] 
+// melbourne.slim-entry-test/EntryContentTitleH4Demo [651] 
 function EntryContentTitleH4Demo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
@@ -545,7 +597,7 @@ function EntryContentTitleH4Demo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentTitleH5Demo [624] 
+// melbourne.slim-entry-test/EntryContentTitleH5Demo [684] 
 function EntryContentTitleH5Demo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
@@ -571,7 +623,7 @@ function EntryContentTitleH5Demo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentTitleDemo [657] 
+// melbourne.slim-entry-test/EntryContentTitleDemo [717] 
 function EntryContentTitleDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
@@ -597,7 +649,33 @@ function EntryContentTitleDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentParagraphDemo [693] 
+// melbourne.slim-entry-test/EntryContentBoldDemo [750] 
+function EntryContentBoldDemo(){
+  let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
+  return (
+    <n.Enclosed label="melbourne.slim-entry/EntryContentBold">
+      <n.Row>
+        <ui_static.Div design={{"type":"light"}} style={{"flex":1}}>
+          <slim_entry.EntryContentBold
+            design={{"type":"light"}}
+            entry={entry}
+            impl={{"key":"bold_","template":["currency_id"]}}
+            custom={{"bold":{"style":{"padding":10}}}}>
+          </slim_entry.EntryContentBold>
+        </ui_static.Div>
+        <ui_static.Div design={{"type":"dark"}} style={{"flex":1}}>
+          <slim_entry.Entry
+            design={{"type":"dark"}}
+            entry={entry}
+            impl={{"type":"bold_","key":"bold","template":["currency_id"]}}
+            custom={{"bold":{"style":{"padding":10}}}}>
+          </slim_entry.Entry>
+        </ui_static.Div>
+      </n.Row>
+    </n.Enclosed>);
+}
+
+// melbourne.slim-entry-test/EntryContentParagraphDemo [783] 
 function EntryContentParagraphDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
@@ -623,7 +701,7 @@ function EntryContentParagraphDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentIconDemo [726] 
+// melbourne.slim-entry-test/EntryContentIconDemo [816] 
 function EntryContentIconDemo(){
   let entry = {"name":"home"};
   return (
@@ -649,7 +727,7 @@ function EntryContentIconDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentImageDemo [757] 
+// melbourne.slim-entry-test/EntryContentImageDemo [847] 
 function EntryContentImageDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
@@ -684,7 +762,7 @@ function EntryContentImageDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentPairDemo [788] 
+// melbourne.slim-entry-test/EntryContentPairDemo [878] 
 function EntryContentPairDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
@@ -723,7 +801,7 @@ function EntryContentPairDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentFieldDemo [823] 
+// melbourne.slim-entry-test/EntryContentFieldDemo [913] 
 function EntryContentFieldDemo(){
   let form = ext_form.makeForm(function (){
     return {
@@ -780,7 +858,7 @@ function EntryContentFieldDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryLayoutFormFadeDemo [878] 
+// melbourne.slim-entry-test/EntryLayoutFormFadeDemo [968] 
 function EntryLayoutFormFadeDemo(){
   let form = ext_form.makeForm(function (){
     return {"visible":true};
@@ -813,7 +891,7 @@ function EntryLayoutFormFadeDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryLayoutFormFoldDemo [912] 
+// melbourne.slim-entry-test/EntryLayoutFormFoldDemo [1002] 
 function EntryLayoutFormFoldDemo(){
   let form = ext_form.makeForm(function (){
     return {"visible":true};
@@ -846,7 +924,7 @@ function EntryLayoutFormFoldDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentControlDemo [958] 
+// melbourne.slim-entry-test/EntryContentControlDemo [1048] 
 function EntryContentControlDemo(){
   let entry = {
     "id":"hello",
@@ -887,7 +965,7 @@ function EntryContentControlDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryLayoutControlDemo [994] 
+// melbourne.slim-entry-test/EntryLayoutControlDemo [1084] 
 function EntryLayoutControlDemo(){
   let entry = {
     "id":"hello",
@@ -940,7 +1018,7 @@ function EntryLayoutControlDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentLinkDemo [1032] 
+// melbourne.slim-entry-test/EntryContentLinkDemo [1122] 
 function EntryContentLinkDemo(){
   let route = ext_route.makeRoute("hello/world");
   let url = ext_route.listenRouteUrl(route);
@@ -969,7 +1047,7 @@ function EntryContentLinkDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryLayoutLinkDemo [1066] 
+// melbourne.slim-entry-test/EntryLayoutLinkDemo [1156] 
 function EntryLayoutLinkDemo(){
   let route = ext_route.makeRoute("hello/world");
   let url = ext_route.listenRouteUrl(route);
@@ -1008,7 +1086,7 @@ function EntryLayoutLinkDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentRouteDemo [1100] 
+// melbourne.slim-entry-test/EntryContentRouteDemo [1190] 
 function EntryContentRouteDemo(){
   let entry = {
     "id":"hello",
@@ -1025,7 +1103,24 @@ function EntryContentRouteDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentActionDemo [1139] 
+// melbourne.slim-entry-test/EntryContentRouteToggleDemo [1226] 
+function EntryContentRouteToggleDemo(){
+  let entry = {
+    "id":"hello",
+    "currency_id":"STATS",
+    "balance":1000,
+    "escrow":50.5
+  };
+  return (
+    <n.Enclosed label="melbourne.slim-entry/EntryContentRouteToggle">
+      <n.Row>
+        <ui_static.Div design={{"type":"light"}} style={{"flex":1}}></ui_static.Div>
+        <ui_static.Div design={{"type":"dark"}} style={{"flex":1}}></ui_static.Div>
+      </n.Row>
+    </n.Enclosed>);
+}
+
+// melbourne.slim-entry-test/EntryContentActionDemo [1262] 
 function EntryContentActionDemo(){
   let entry = {
     "id":"hello",
@@ -1069,7 +1164,7 @@ function EntryContentActionDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryContentSubmitDemo [1175] 
+// melbourne.slim-entry-test/EntryContentSubmitDemo [1298] 
 function EntryContentSubmitDemo(){
   let form = ext_form.makeForm(function (){
     return {
@@ -1113,7 +1208,7 @@ function EntryContentSubmitDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryLayoutCardDemo [1210] 
+// melbourne.slim-entry-test/EntryLayoutCardDemo [1333] 
 function EntryLayoutCardDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
@@ -1153,7 +1248,7 @@ function EntryLayoutCardDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryLayoutFormDemo [1250] 
+// melbourne.slim-entry-test/EntryLayoutFormDemo [1373] 
 function EntryLayoutFormDemo(){
   let form = ext_form.makeForm(function (){
     return {
@@ -1224,7 +1319,7 @@ function EntryLayoutFormDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-entry-test/EntryDemo [1313] 
+// melbourne.slim-entry-test/EntryDemo [1436] 
 function EntryDemo(){
   let entry = {"currency_id":"STATS","balance":1000,"escrow":50.5};
   return (
@@ -1402,10 +1497,13 @@ var MODULE = {
   "EntryLayoutPopupDemo":EntryLayoutPopupDemo,
   "EntryLayoutDebugDemo":EntryLayoutDebugDemo,
   "EntryContentSeparatorDemo":EntryContentSeparatorDemo,
+  "EntryContentTitleH1Demo":EntryContentTitleH1Demo,
+  "EntryContentTitleH2Demo":EntryContentTitleH2Demo,
   "EntryContentTitleH3Demo":EntryContentTitleH3Demo,
   "EntryContentTitleH4Demo":EntryContentTitleH4Demo,
   "EntryContentTitleH5Demo":EntryContentTitleH5Demo,
   "EntryContentTitleDemo":EntryContentTitleDemo,
+  "EntryContentBoldDemo":EntryContentBoldDemo,
   "EntryContentParagraphDemo":EntryContentParagraphDemo,
   "EntryContentIconDemo":EntryContentIconDemo,
   "EntryContentImageDemo":EntryContentImageDemo,
@@ -1418,6 +1516,7 @@ var MODULE = {
   "EntryContentLinkDemo":EntryContentLinkDemo,
   "EntryLayoutLinkDemo":EntryLayoutLinkDemo,
   "EntryContentRouteDemo":EntryContentRouteDemo,
+  "EntryContentRouteToggleDemo":EntryContentRouteToggleDemo,
   "EntryContentActionDemo":EntryContentActionDemo,
   "EntryContentSubmitDemo":EntryContentSubmitDemo,
   "EntryLayoutCardDemo":EntryLayoutCardDemo,

@@ -272,7 +272,41 @@ function TextBaseDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.ui-text-test/AvatarDemo [301] 
+// melbourne.ui-text-test/ActivityIndicatorDemo [295] 
+function ActivityIndicatorDemo(){
+  return (
+    <n.Enclosed label="melbourne.ui-text/ActivityIndicator">
+      <n.Row>
+        <ui_section.SectionBase design={{"type":"light"}}>
+          <ui_text.ActivityIndicator design={{"type":"light"}}></ui_text.ActivityIndicator>
+          <ui_text.ActivityIndicator design={{"type":"light"}} size={100}></ui_text.ActivityIndicator>
+        </ui_section.SectionBase>
+        <ui_section.SectionBase design={{"type":"dark"}}>
+          <ui_text.ActivityIndicator design={{"type":"dark"}}></ui_text.ActivityIndicator>
+          <ui_text.ActivityIndicator design={{"type":"light"}} size={100}></ui_text.ActivityIndicator>
+        </ui_section.SectionBase>
+      </n.Row>
+    </n.Enclosed>);
+}
+
+// melbourne.ui-text-test/IconDemo [320] 
+function IconDemo(){
+  return (
+    <n.Enclosed label="melbourne.ui-text/Icon">
+      <n.Row>
+        <ui_section.SectionBase design={{"type":"light"}}>
+          <ui_text.Icon design={{"type":"light"}} name="close"></ui_text.Icon>
+          <ui_text.Icon design={{"type":"light"}} name="close" size={100}></ui_text.Icon>
+        </ui_section.SectionBase>
+        <ui_section.SectionBase design={{"type":"dark"}}>
+          <ui_text.Icon design={{"type":"dark"}} name="close"></ui_text.Icon>
+          <ui_text.Icon design={{"type":"light"}} name="close" size={100}></ui_text.Icon>
+        </ui_section.SectionBase>
+      </n.Row>
+    </n.Enclosed>);
+}
+
+// melbourne.ui-text-test/AvatarDemo [349] 
 function AvatarDemo(){
   return (
     <n.Enclosed label="melbourne.ui-text/Avatar">
@@ -289,7 +323,7 @@ function AvatarDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.ui-text-test/MinorBaseDemo [339] 
+// melbourne.ui-text-test/MinorBaseDemo [387] 
 function MinorBaseDemo(){
   let [color,setColor] = React.useState("purple");
   let [type,setType] = React.useState("dark");
@@ -361,7 +395,7 @@ function MinorBaseDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.ui-text-test/AccentBaseDemo [421] 
+// melbourne.ui-text-test/AccentBaseDemo [469] 
 function AccentBaseDemo(){
   let [color,setColor] = React.useState("purple");
   let [type,setType] = React.useState("dark");
@@ -433,7 +467,7 @@ function AccentBaseDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.ui-text-test/ButtonTooltipDemo [500] 
+// melbourne.ui-text-test/ButtonTooltipDemo [548] 
 function ButtonTooltipDemo(){
   let mainComponent = React.useCallback(function (){
     return (
@@ -493,7 +527,7 @@ function ButtonTooltipDemo(){
     </n.Isolation>);
 }
 
-// melbourne.ui-text-test/ConfirmTooltipDemo [548] 
+// melbourne.ui-text-test/ConfirmTooltipDemo [596] 
 function ConfirmTooltipDemo(){
   return (
     <n.Isolation>
@@ -542,7 +576,7 @@ function ConfirmTooltipDemo(){
     </n.Isolation>);
 }
 
-// melbourne.ui-text-test/TextAltDemo [587] 
+// melbourne.ui-text-test/TextAltDemo [635] 
 function TextAltDemo(){
   return (
     <n.Enclosed label="melbourne.ui-text/TextAlt">
@@ -568,6 +602,8 @@ var MODULE = {
   "TabsAccentDemo":TabsAccentDemo,
   "HeaderBaseDemo":HeaderBaseDemo,
   "TextBaseDemo":TextBaseDemo,
+  "ActivityIndicatorDemo":ActivityIndicatorDemo,
+  "IconDemo":IconDemo,
   "AvatarDemo":AvatarDemo,
   "MinorBaseDemo":MinorBaseDemo,
   "AccentBaseDemo":AccentBaseDemo,
