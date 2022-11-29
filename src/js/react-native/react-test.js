@@ -474,7 +474,7 @@ function UseTreeDemo(){
     </n.Enclosed>);
 }
 
-var MODULE = // 1308f84c-5104-4752-864d-68e1ec46ddd1
+var MODULE = // 1d798f87-6dc2-4ab7-b54d-341428b1df30
 {
   "UseRefreshDemo":UseRefreshDemo,
   "UseGetCountDemo":UseGetCountDemo,

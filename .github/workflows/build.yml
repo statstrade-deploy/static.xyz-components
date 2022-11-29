@@ -8,12 +8,6 @@ jobs:
     - name: Node Setup
       uses: actions/setup-node@v3
       with: {node-version: 16.x}
-    - name: Write SSH keys
-      shell: bash
-      run: |
-        install -m 600 -D /dev/null ~/.ssh/id_rsa
-        echo "${{ secrets.GH_PRIVATE_COMMIT_KEY }}" > ~/.ssh/id_rsa
-        ssh-keyscan -H github.com > ~/.ssh/known_hosts
     - name: Deploy gh-pages
       run: |-
         make build-web
