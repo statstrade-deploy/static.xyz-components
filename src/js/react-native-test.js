@@ -518,7 +518,7 @@ function UsePortalLayoutsDemo(){
     </n.Enclosed>);
 }
 
-var MODULE = // 1271a42e-2e77-4810-90fe-e122caf99d05
+var MODULE = // b52d107a-3cbb-4d11-b43c-76d39933ee86
 {
   "nest_tree":nest_tree,
   "TREEDATA":TREEDATA,

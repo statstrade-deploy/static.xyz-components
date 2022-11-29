@@ -143,7 +143,7 @@ function RegistrationFormDemo(){
     </n.Enclosed>);
 }
 
-var MODULE = // be8da0fa-803d-40d2-b24b-516238cec44b
+var MODULE = // 30eb1f8e-c1ab-461f-b625-6eeeb749aae4
 {
   "RegistraionValidation":RegistraionValidation,
   "RegistrationFormDemo":RegistrationFormDemo
