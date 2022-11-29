@@ -322,7 +322,7 @@ function TouchableInputDemo(){
     </n.Enclosed>);
 }
 
-var MODULE = // fa7e871d-3d3e-4aac-bf9b-6ff3e9ddeee6
+var MODULE = // 194a2116-5e28-4b82-8418-0055dad6f352
 {
   "TagDemo":TagDemo,
   "BoxDemo":BoxDemo,

@@ -72,7 +72,7 @@ function NotifyDemo(){
     </n.Enclosed>);
 }
 
-var MODULE = // c1d01b36-2322-4d0e-b93c-f910c5f2a9cc
+var MODULE = // 16ae981b-8e2e-44de-a385-79a435808164
 {"NotifyPane":NotifyPane,"NotifyDemo":NotifyDemo};;
 
 export default MODULE
