@@ -2,6 +2,8 @@ import React from 'react'
 
 import * as ReactNative from 'react-native'
 
+import RNIcon from 'react-native-vector-icons/Entypo'
+
 import physical_base from './physical-base'
 
 import a from './animate'
@@ -172,13 +174,13 @@ function SpinnerValues({
 }
 
 // js.react-native.ui-spinner/useSpinnerPosition [174] 
-function useSpinnerPosition(value,setValue,valueRef,min,max){
+function useSpinnerPosition(value,setValue,valueRef,min,max,stride){
   let position = React.useCallback(new ReactNative.Animated.Value(0),[]);
   let prevRef = React.useRef(value);
   React.useEffect(function (){
     position.addListener(function (){
       let {_offset,_value} = position;
-      let nValue = k.clamp(min,max,valueRef.current - Math.round(_value / 3));
+      let nValue = k.clamp(min,max,valueRef.current - Math.round(_value / (stride || 8)));
       if(nValue != prevRef.current){
         setValue(nValue);
         prevRef.current = nValue;
@@ -195,6 +197,8 @@ function Spinner({
   disabled,
   min,
   max,
+  panDirection,
+  panStride,
   value,
   setValue,
   style,
@@ -207,12 +211,12 @@ function Spinner({
   let [__value,__setValue] = React.useState(value);
   let __valueRef = React.useRef(__value);
   let [styleStatic,transformFn] = spinnerTheme({theme,themePipeline,...rprops});
-  let position = useSpinnerPosition(__value,__setValue,__valueRef,min,max);
+  let position = useSpinnerPosition(__value,__setValue,__valueRef,min,max,panStride);
   let {panHandlers,touchable} = physical_edit.usePanTouchable({
     disabled,
     "chord":Object.assign({"value":__value},chord),
     ...rprops
-  },"vertical",position,false);
+  },panDirection || "vertical",position,false);
   let {hovering,pressing,setHovering,setPressing} = touchable;
   React.useEffect(function (){
     __valueRef.current = __value;
@@ -227,6 +231,22 @@ function Spinner({
       __setValue(value);
     }
   },[value]);
+  let iconElem = (
+    <ReactNative.View
+      style={{
+        "zIndex":-10,
+        "transform":[
+              {
+                  "rotateZ":(panDirection == "horizontal") ? "45deg" : "-45deg"
+                }
+            ]
+      }}>
+      <RNIcon
+        name="resize-full-screen"
+        style={[styleStatic,{"paddingLeft":5}]}
+        size={15}>
+      </RNIcon>
+    </ReactNative.View>);
   return (
     <physical_base.Box
       indicators={touchable.indicators}
@@ -247,7 +267,12 @@ function Spinner({
         setPressing(false);
       }}
       style={[
-        {"overflow":"hidden","flexDirection":"row","padding":5},
+        {
+            "overflow":"hidden",
+            "flexDirection":"row",
+            "alignItems":"center",
+            "padding":5
+          },
         styleStatic,
         ...(Array.isArray(style) ? style : ((null == style) ? [] : [style]))
       ]}
@@ -263,6 +288,7 @@ function Spinner({
               max={max}
               {...rprops}>
             </SpinnerValues>),
+        iconElem,
         (
             <ReactNative.View
               key="background"

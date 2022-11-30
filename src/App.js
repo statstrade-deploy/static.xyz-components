@@ -18,9 +18,7 @@ import base_box from './xt/lang/event-box'
 
 import ext_box from './js/react/ext-box'
 
-import web_native from './component/web-native'
-
-// statsenv.main.xyz-components/__import__ [31] 
+// statsenv.main.xyz-components/__import__ [30] 
 import RNIcon from 'react-native-vector-icons/Entypo'
 import * as ExpoImagePicker from 'expo-image-picker'
 import * as RNSvg from 'react-native-svg'
@@ -41,7 +39,7 @@ Object.defineProperty((globalThis),"RNSvg",{"value":RNSvg,"writeable":true});
 Object.defineProperty((globalThis),"LWCharts",{"value":LWCharts,"writeable":true});
 Object.defineProperty((globalThis),"Expo",{"value":Expo,"writeable":true});
 
-// statsenv.main.xyz-components/Global [35] 
+// statsenv.main.xyz-components/Global [34] 
 globalThis["statsenv_main_xyz_components$$Global"] = base_box.make_box({"init":false,"l0":"03-pune-frame","l1":"101-sidemenu"});
 
 // statsenv.main.xyz-components/Screens [40] 
@@ -49,7 +47,6 @@ globalThis["statsenv_main_xyz_components$$Screens"] = base_box.make_box({});
 
 // statsenv.main.xyz-components/__screen__ [43] 
 base_box.set_data(globalThis["statsenv_main_xyz_components$$Screens"],[],{
-  "00-native":web_native.raw_controls(),
   "01-melbourne":web_melbourne.melbourne_controls(),
   "02-slim":web_melbourne.slim_controls(),
   "03-pune-frame":web_pune_frame.pune_frame_controls()
@@ -79,20 +76,20 @@ function AppMain(){
     </ReactNative.View>);
 }
 
-// statsenv.main.xyz-components/AppScratch [72] 
+// statsenv.main.xyz-components/AppScratch [71] 
 function AppScratch(){
   return (
     <ReactNative.View></ReactNative.View>);
 }
 
-// statsenv.main.xyz-components/__main__ [76] 
+// statsenv.main.xyz-components/__main__ [75] 
 base_box.set_data(
   globalThis["statsenv_main_xyz_components$$Global"],
   ["Main"],
   AppMain
 );
 
-// statsenv.main.xyz-components/App [80] 
+// statsenv.main.xyz-components/App [79] 
 function App(){
   let {Main} = ext_box.listenBox(globalThis["statsenv_main_xyz_components$$Global"],[]);
   return (

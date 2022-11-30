@@ -6,7 +6,7 @@ import ext_form from '../js/react/ext-form'
 
 import slim_number from './slim-number'
 
-// melbourne.slim-number-test/FormSpinnerDemo [21] 
+// melbourne.slim-number-test/FormSpinnerDemo [20] 
 function FormSpinnerDemo(){
   let form = ext_form.makeForm(function (){
     return {"price":50};
@@ -43,7 +43,7 @@ function FormSpinnerDemo(){
     </n.Enclosed>);
 }
 
-// melbourne.slim-number-test/FormSliderDemo [54] 
+// melbourne.slim-number-test/FormSliderDemo [53] 
 function FormSliderDemo(){
   let form = ext_form.makeForm(function (){
     return {"price":50};
