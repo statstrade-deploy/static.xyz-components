@@ -1,0 +1,20 @@
+{
+  "files": {
+    "app.js": "/foundation.web/static/js/app.c913ebd5.chunk.js",
+    "app.js.map": "/foundation.web/static/js/app.c913ebd5.chunk.js.map",
+    "runtime~app.js": "/foundation.web/static/js/runtime~app.c06f326e.js",
+    "runtime~app.js.map": "/foundation.web/static/js/runtime~app.c06f326e.js.map",
+    "static/js/2.da9a5c77.chunk.js": "/foundation.web/static/js/2.da9a5c77.chunk.js",
+    "static/js/2.da9a5c77.chunk.js.map": "/foundation.web/static/js/2.da9a5c77.chunk.js.map",
+    "fonts/Entypo.ttf": "/foundation.web/./fonts/Entypo.ttf",
+    "index.html": "/foundation.web/index.html",
+    "manifest.json": "/foundation.web/manifest.json",
+    "serve.json": "/foundation.web/serve.json",
+    "static/js/2.da9a5c77.chunk.js.LICENSE.txt": "/foundation.web/static/js/2.da9a5c77.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime~app.c06f326e.js",
+    "static/js/2.da9a5c77.chunk.js",
+    "static/js/app.c913ebd5.chunk.js"
+  ]
+}
